@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace handwriting_recognition
 {
-    public partial class Form1 : Form
+    public partial class FormHandWriting : Form
     {
-        public Form1()
+        public FormHandWriting()
         {
             InitializeComponent();
         }
