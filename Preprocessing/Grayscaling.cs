@@ -12,21 +12,21 @@ namespace Preprocessing
         private Bitmap _input;
         private bool _optimizedParallel;
         private Bitmap _output;
-        public Grayscaling(Bitmap input, bool optimizedParallel)
+        public Grayscaling(Bitmap input, bool optimizedParallel=false)
         {
             _input = input;
             _optimizedParallel = optimizedParallel;
-            Bitmap _output = new Bitmap(input.Width, input.Height);
+            _output = new Bitmap(input.Width, input.Height);
             if (_optimizedParallel)
             {
-                ParallelGrayscaling();
+                _output = ParallelGrayscaling();
             }
             else
             {
-                GrayscalingSequent();
+                _output = GrayscalingSequent();
             }
         }
-        private void ParallelGrayscaling()
+        private Bitmap ParallelGrayscaling()
         {
             Parallel.For(0, _input.Width, x =>
             {
@@ -38,9 +38,10 @@ namespace Preprocessing
                     _output.SetPixel(x, y, Color.FromArgb(pixelColor.A, grey, grey, grey));
                 });
             });
+            return _output;
         }
 
-        private void GrayscalingSequent()
+        private Bitmap GrayscalingSequent()
         {
             for (int x = 0; x < _input.Width; x++)
             {
@@ -52,6 +53,7 @@ namespace Preprocessing
                     _output.SetPixel(x, y, Color.FromArgb(pixelColor.A, grey, grey, grey));
                 }
             }
+            return _output;
         }
 
         public Bitmap Output
