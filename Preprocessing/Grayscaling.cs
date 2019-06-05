@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Preprocessing
 {
-    public class Grayscaling
+    class Grayscaling
     {
         private Bitmap _input;
         private bool _optimizedParallel;

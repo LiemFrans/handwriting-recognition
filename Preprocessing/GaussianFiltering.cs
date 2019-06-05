@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Preprocessing
 {
-    public class GaussianFiltering
+    class GaussianFiltering
     {
         private Bitmap _input;
         private Bitmap _output;
@@ -116,7 +116,7 @@ namespace Preprocessing
             return output;
         }
 
-        private Bitmap Output
+        public Bitmap Output
         {
             get
             {

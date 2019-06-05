@@ -76,7 +76,7 @@ namespace Preprocessing
             return _output;
         }
 
-        private Bitmap Output
+        public Bitmap Output
         {
             get
             {
