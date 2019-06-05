@@ -55,6 +55,10 @@
       <Project>{476f4e10-6242-403c-8668-2f1e0864660e}</Project>
       <Name>BackpropagationNeuralNetwork</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FeatureExtraction\FeatureExtraction.csproj">
+      <Project>{3c6af419-1ffb-4bf9-80e8-21ced7629847}</Project>
+      <Name>FeatureExtraction</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Preprocessing\Preprocessing.csproj">
       <Project>{18306265-A2F7-420C-96F3-91942552C7A1}</Project>
       <Name>Preprocessing</Name>

@@ -32,7 +32,8 @@ namespace FeatureExtraction
                 for (int y = 0; y < _input.Height; y++)
                 {
                     Color color = _input.GetPixel(x, y);
-                    if (color == Color.Black)
+                    Color colorBlack = Color.Black;
+                    if (color.A == colorBlack.A && color.R == colorBlack.R && color.G == colorBlack.G && color.B == colorBlack.B)
                     {
                         horizontalProjection[x]++;
                     }
@@ -49,7 +50,8 @@ namespace FeatureExtraction
                 for (int x = 0; x < _input.Width; x++)
                 {
                     Color color = _input.GetPixel(x, y);
-                    if (color == Color.Black)
+                    Color colorBlack = Color.Black;
+                    if (color.A == colorBlack.A && color.R == colorBlack.R && color.G == colorBlack.G && color.B == colorBlack.B)
                     {
                         verticalProjection[y]++;
                     }
