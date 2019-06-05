@@ -34,6 +34,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +54,10 @@
     <ProjectReference Include="..\BackpropagationNeuralNetwork\BackpropagationNeuralNetwork.csproj">
       <Project>{476f4e10-6242-403c-8668-2f1e0864660e}</Project>
       <Name>BackpropagationNeuralNetwork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Preprocessing\Preprocessing.csproj">
+      <Project>{18306265-A2F7-420C-96F3-91942552C7A1}</Project>
+      <Name>Preprocessing</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

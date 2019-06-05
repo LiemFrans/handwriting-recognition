@@ -1,14 +1,52 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using BackpropagationNeuralNetwork;
+using Preprocessing;
 
 namespace Example
 {
     class Program
     {
+        [STAThread]
+        static void Main(string[] args)
+        {
+            using (OpenFileDialog dlg = new OpenFileDialog())
+            {
+                dlg.Title = "Open Image";
+                dlg.Filter = "bmp files (*.jpg)|*.jpg";
+
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    // Create a new Bitmap object from the picture file on disk,
+                    // and assign that to the PictureBox.Image property
+                    var bitmap = new Bitmap(dlg.FileName);
+
+                    Preprocessing.Preprocessing preprocessing = new Preprocessing.Preprocessing(bitmap, 10, 20);
+                    string directoryGrayscale = Path.GetDirectoryName(dlg.FileName) + "\\Grayscale.bmp";
+                    preprocessing.GrayscalingImage.Save(directoryGrayscale, ImageFormat.Bmp);
+
+                    string directoryFilteringImage = Path.GetDirectoryName(dlg.FileName) + "\\Filtering.bmp";
+                    preprocessing.FilterImage.Save(directoryFilteringImage, ImageFormat.Bmp);
+
+                    string directoryThresholdBinary = Path.GetDirectoryName(dlg.FileName) + "\\AverageBinary.bmp";
+                    preprocessing.AverageBinaryImage.Save(directoryThresholdBinary, ImageFormat.Bmp);
+
+                    Console.WriteLine(directoryGrayscale);
+                    Console.WriteLine(directoryFilteringImage);
+                    Console.WriteLine(directoryThresholdBinary);
+
+                    Console.ReadKey();
+                }
+            }
+        }
+        /*
         static void Main(string[] args)
         {
             Console.WriteLine("\nBegin neural network back-propagation demo");
@@ -69,7 +107,7 @@ namespace Example
             Console.WriteLine("\nEnd back-propagation demo\n");
             Console.ReadLine();
         } // Main
-
+        */
         public static void ShowMatrix(double[][] matrix, int numRows,
           int decimals, bool indices)
         {
