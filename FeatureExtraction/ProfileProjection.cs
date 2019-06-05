@@ -29,7 +29,7 @@ namespace FeatureExtraction
             int[] horizontalProjection = new int[_input.Width];
             for (int x = 0; x < _input.Width; x++)
             {
-                for(int y = 0; y < _input.Height; y++)
+                for (int y = 0; y < _input.Height; y++)
                 {
                     Color color = _input.GetPixel(x, y);
                     if (color == Color.Black)
@@ -44,12 +44,12 @@ namespace FeatureExtraction
         private int[] VerticalProjection()
         {
             int[] verticalProjection = new int[_input.Height];
-            for(int y = 0; y < _input.Height; y++)
+            for (int y = 0; y < _input.Height; y++)
             {
-                for(int x = 0; x < _input.Width; x++)
+                for (int x = 0; x < _input.Width; x++)
                 {
                     Color color = _input.GetPixel(x, y);
-                    if(color == Color.Black)
+                    if (color == Color.Black)
                     {
                         verticalProjection[y]++;
                     }
@@ -60,3 +60,4 @@ namespace FeatureExtraction
 
     }
 }
+
