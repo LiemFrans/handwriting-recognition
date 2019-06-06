@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BackpropagationNeuralNetwork;
+using FeatureExtraction;
+using FeatureExtraction.Moments;
 using Preprocessing;
-
 namespace Example
 {
     class Program
@@ -41,6 +42,26 @@ namespace Example
                     Console.WriteLine(directoryGrayscale);
                     Console.WriteLine(directoryFilteringImage);
                     Console.WriteLine(directoryThresholdBinary);
+
+                    Console.WriteLine("ProfileProjection");
+                    ProfileProjection profileProjection = new ProfileProjection(preprocessing.Output);
+                    var profileProjectionFeature =  profileProjection.ProjectionFeature;
+
+                    for(int i = 0; i < profileProjectionFeature.Length; i++)
+                    {
+                        Console.WriteLine(profileProjectionFeature[i]);
+                    }
+
+                    Console.WriteLine("==================================");
+                    MomentsHu momentsHu = new MomentsHu(preprocessing.Output);
+                    var moments = momentsHu.Moments;
+                    Console.WriteLine("Moments");
+                    for(int i = 0; i < moments.Length; i++)
+                    {
+                        Console.WriteLine("Moments " + i + " : " + moments[i]);
+                    }
+
+
 
                     Console.ReadKey();
                 }
