@@ -11,6 +11,8 @@ using BackpropagationNeuralNetwork;
 using FeatureExtraction;
 using FeatureExtraction.Moments;
 using Preprocessing;
+using ProfileProjection;
+
 namespace Example
 {
     class Program
@@ -44,9 +46,20 @@ namespace Example
                     Console.WriteLine(directoryThresholdBinary);
 
                     Console.WriteLine("ProfileProjection");
-                    ProfileProjection profileProjection = new ProfileProjection(preprocessing.Output);
-                    var profileProjectionFeature =  profileProjection.ProjectionFeature;
+                    ProfileProjection.ProfileProjection profileProjection = new ProfileProjection.ProfileProjection(preprocessing.Output,10,25);
+                    var resultImageHorizontally = profileProjection.ResultImageAfterSliceHorizontally;
+                    int i = 0;
+                    foreach(Bitmap result in resultImageHorizontally)
+                    {
+                        string diretorySlicing = Path.GetDirectoryName(dlg.FileName) + "\\slicing-" + i + ".bmp";
+                        Console.WriteLine(diretorySlicing);
+                        result.Save(diretorySlicing, ImageFormat.Bmp);
+                        i++;
+                    }
+                    //ProfileProjection profileProjection = new ProfileProjection(preprocessing.Output);
+                    //var profileProjectionFeature =  profileProjection.ProjectionFeature;
 
+                    /*
                     for(int i = 0; i < profileProjectionFeature.Length; i++)
                     {
                         Console.WriteLine(profileProjectionFeature[i]);
@@ -60,7 +73,7 @@ namespace Example
                     {
                         Console.WriteLine("Moments " + i + " : " + moments[i]);
                     }
-
+                    */
 
 
                     Console.ReadKey();
