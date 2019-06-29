@@ -44,7 +44,6 @@
   <ItemGroup>
     <Compile Include="Moments\ImageAccess.cs" />
     <Compile Include="Moments\MomentsHu.cs" />
-    <Compile Include="ProfileProjection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
