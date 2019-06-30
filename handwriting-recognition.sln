@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Preprocessing", "Preprocess
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureExtraction", "FeatureExtraction\FeatureExtraction.csproj", "{3C6AF419-1FFB-4BF9-80E8-21CED7629847}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProfileProjection", "..\ProfileProjection\ProfileProjection.csproj", "{3B904F68-9686-4CAD-88F3-DB1402EE6769}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProfileProjection", "ProfileProjection\ProfileProjection.csproj", "{3B904F68-9686-4CAD-88F3-DB1402EE6769}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

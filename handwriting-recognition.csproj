@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="DTO\ImageDTO.cs" />
     <Compile Include="FormHandWriting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +79,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Preprocessing\Preprocessing.csproj">
+      <Project>{18306265-A2F7-420C-96F3-91942552C7A1}</Project>
+      <Name>Preprocessing</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

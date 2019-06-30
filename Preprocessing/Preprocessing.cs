@@ -33,7 +33,6 @@ namespace Preprocessing
             _averageBinaryImage = averageBinary.Output;
 
             _output = _averageBinaryImage;
-            Console.WriteLine("Done");
         }
 
         public Bitmap Output

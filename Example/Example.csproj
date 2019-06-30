@@ -51,10 +51,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ProfileProjection\ProfileProjection.csproj">
-      <Project>{3B904F68-9686-4CAD-88F3-DB1402EE6769}</Project>
-      <Name>ProfileProjection</Name>
-    </ProjectReference>
     <ProjectReference Include="..\BackpropagationNeuralNetwork\BackpropagationNeuralNetwork.csproj">
       <Project>{476f4e10-6242-403c-8668-2f1e0864660e}</Project>
       <Name>BackpropagationNeuralNetwork</Name>
@@ -66,6 +62,10 @@
     <ProjectReference Include="..\Preprocessing\Preprocessing.csproj">
       <Project>{18306265-A2F7-420C-96F3-91942552C7A1}</Project>
       <Name>Preprocessing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProfileProjection\ProfileProjection.csproj">
+      <Project>{3B904F68-9686-4CAD-88F3-DB1402EE6769}</Project>
+      <Name>ProfileProjection</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
