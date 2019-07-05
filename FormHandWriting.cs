@@ -1,5 +1,7 @@
-﻿using handwriting_recognition.DTO;
+﻿using FeatureExtraction.Moments;
+using handwriting_recognition.DTO;
 using Preprocessing;
+using ProfileProjection;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +20,7 @@ namespace handwriting_recognition
         private List<ImageDTO> _dataTraining;
         private string _action;
         private Preprocessing.Preprocessing preprocessing;
+        private ProfileProjection.ProfileProjection profileProjection;
         public FormHandWriting()
         {
             InitializeComponent();
@@ -28,11 +31,6 @@ namespace handwriting_recognition
             FolderBrowserDialog f = new FolderBrowserDialog();
         }
 
-
-        private void btnProcessVPP_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnOpenImageTraining_Click(object sender, EventArgs e)
         {
@@ -54,6 +52,8 @@ namespace handwriting_recognition
                             ImageDTO imageDTO = new ImageDTO();
                             imageDTO.Raw = new Bitmap(f);
                             imageDTO.ClassName = Path.GetFileName(fd);
+                            char c = imageDTO.ClassName[0];
+                            imageDTO.PositionOfCharacter = new Util().charToIntegerPosition(c);//to get class integer of character (e.g: 'A' is class 0, 'B' is class 1, etc
                             imageDTO.FileName = Path.GetFileName(f);
                             imageList.Images.Add(imageDTO.ClassName, new Bitmap(imageDTO.Raw));
                             _dataTraining.Add(imageDTO);
@@ -83,10 +83,10 @@ namespace handwriting_recognition
         {
             e.Result = BackgroundProcessLogicMethod();
         }
+
         private int BackgroundProcessLogicMethod()
         {
             int result = 0;
-            MessageBox.Show("I was doing some work in the background.");
             backgroundPreprocessing();
             return result;
         }
@@ -94,11 +94,15 @@ namespace handwriting_recognition
         private void bwLoadingPreprocessing_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             if (e.Error != null) MessageBox.Show(e.Error.Message);
-            else MessageBox.Show(e.Result.ToString());
+            else MessageBox.Show("Done");
         }
 
         private void backgroundPreprocessing()
         {
+            this.Invoke(new MethodInvoker(delegate {
+                btnPreprocessingTraining.Enabled = false;
+                btnOpenImage.Enabled = false;
+            }));
             int lengthGaussianFilter = Convert.ToInt32(numLengthGaussian.Value);
             double weightGaussianFilter = Convert.ToDouble(numWeightGaussian.Value);
             var imageListGrayscalling = new ImageList { ImageSize = new Size(200, 200) };
@@ -112,15 +116,25 @@ namespace handwriting_recognition
                  imageDTO.Gaussian = preprocessing.FilterImage;
                  imageDTO.Binary = preprocessing.AverageBinaryImage;
 
-                 imageListGrayscalling.Images.Add(imageDTO.ClassName, imageDTO.GrayScalling);
-                 imageListGaussian.Images.Add(imageDTO.ClassName, imageDTO.Gaussian);
-                 imageListBinary.Images.Add(imageDTO.ClassName, imageDTO.Binary);
+
                  _dataTraining[i] = imageDTO;
              });
+
+            for(int i = 0; i < _dataTraining.Count; i++)
+            {
+                ImageDTO imageDTO = _dataTraining[i];
+                imageListGrayscalling.Images.Add(imageDTO.ClassName, imageDTO.GrayScalling);
+                imageListGaussian.Images.Add(imageDTO.ClassName, imageDTO.Gaussian);
+                imageListBinary.Images.Add(imageDTO.ClassName, imageDTO.Binary);
+            }
+
             setImagetoListView(listViewGrayscalling, imageListGrayscalling);
             setImagetoListView(listViewGaussianFiltering, imageListGaussian);
             setImagetoListView(listViewBinerisasi, imageListBinary);
-            btnProfileProjection.Invoke(new MethodInvoker(delegate { btnProfileProjection.Enabled = true; }));
+            this.Invoke(new MethodInvoker(delegate {
+                btnOpenImage.Enabled = true;
+            }));
+            btnFeatureExtractionTraining.Invoke(new MethodInvoker(delegate { btnFeatureExtractionTraining.Enabled = true; }));
         }
 
         private void btnPreprocessingTraining_Click(object sender, EventArgs e)
@@ -128,9 +142,62 @@ namespace handwriting_recognition
             bwLoadingPreprocessing.RunWorkerAsync();
         }
 
-        private void btnProfileProjection_Click(object sender, EventArgs e)
+        private void btnFeatureExtractionTraining_Click(object sender, EventArgs e)
         {
+            dataFiturTraining.ColumnCount = 10;
+            string[] columnName = { "ClassNames", "FileName", "Position of Character", "Moments Hu 0", "Moments Hu 1", "Moments Hu 2", "Moments Hu 3", "Moments Hu 4", "Moments Hu 5", "Moments Hu 6" };
+            for(int i = 0; i < columnName.Length; i++)
+            {
+                dataFiturTraining.Columns[i].Name = columnName[i];
+                dataFiturTraining.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
 
+            bwExtractionFeatureTraining.RunWorkerAsync();
+        }
+
+        private void bwExtractionFeatureTraining_DoWork(object sender, DoWorkEventArgs e)
+        {
+            e.Result = BackgroundExtractionLogicMethod();
+        }
+        private int BackgroundExtractionLogicMethod()
+        {
+            int result = 0;
+            backgroundExtractionFeature(_dataTraining);
+            return result;
+        }
+
+        private void bwExtractionFeatureTraining_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Error != null) MessageBox.Show(e.Error.Message);
+            else MessageBox.Show("Done");
+        }
+
+        private void backgroundExtractionFeature(List<ImageDTO> data)
+        {
+            btnOpenImage.Invoke(new MethodInvoker(delegate { btnOpenImage.Enabled = false; }));
+            btnFeatureExtractionTraining.Invoke(new MethodInvoker(delegate { btnFeatureExtractionTraining.Enabled = false; }));
+            Parallel.For(0, data.Count, i =>
+            {
+                ImageDTO imageDTO = data[i];
+                MomentsHu momentsHu = new MomentsHu(imageDTO.Binary);
+                imageDTO.MomentHu = momentsHu.Moments;
+                data[i] = imageDTO;
+            });
+            for(int i = 0; i < data.Count; i++)
+            {
+                string[] rows = new string[data[i].MomentHu.Length+3];
+                rows[0] = data[i].ClassName;
+                rows[1] = data[i].FileName;
+                rows[2] = data[i].PositionOfCharacter.ToString();
+                int k = 0;
+                for(int j = 3; j < rows.Length; j++)
+                {
+                    rows[j] = data[i].MomentHu[k].ToString();
+                    k++;
+                }
+                dataFiturTraining.Invoke(new MethodInvoker(delegate { dataFiturTraining.Rows.Add(rows); }));
+            }
+            btnOpenImage.Invoke(new MethodInvoker(delegate { btnOpenImage.Enabled = true; }));
         }
     }
 }
