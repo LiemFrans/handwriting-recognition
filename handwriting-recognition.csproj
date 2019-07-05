@@ -55,6 +55,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util.cs" />
     <EmbeddedResource Include="FormHandWriting.resx">
       <DependentUpon>FormHandWriting.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,9 +82,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="FeatureExtraction\FeatureExtraction.csproj">
+      <Project>{3C6AF419-1FFB-4BF9-80E8-21CED7629847}</Project>
+      <Name>FeatureExtraction</Name>
+    </ProjectReference>
     <ProjectReference Include="Preprocessing\Preprocessing.csproj">
       <Project>{18306265-A2F7-420C-96F3-91942552C7A1}</Project>
       <Name>Preprocessing</Name>
+    </ProjectReference>
+    <ProjectReference Include="ProfileProjection\ProfileProjection.csproj">
+      <Project>{3B904F68-9686-4CAD-88F3-DB1402EE6769}</Project>
+      <Name>ProfileProjection</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
