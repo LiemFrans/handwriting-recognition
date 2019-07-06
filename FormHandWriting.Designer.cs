@@ -126,6 +126,7 @@
             this.imageListBinary = new System.Windows.Forms.ImageList(this.components);
             this.imageListHorizontalProjector = new System.Windows.Forms.ImageList(this.components);
             this.bwExtractionFeature = new System.ComponentModel.BackgroundWorker();
+            this.bwBPNN = new System.ComponentModel.BackgroundWorker();
             this.tabBase.SuspendLayout();
             this.tabHome.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -1358,6 +1359,11 @@
             this.bwExtractionFeature.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwExtractionFeature_DoWork);
             this.bwExtractionFeature.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwExtractionFeature_RunWorkerCompleted);
             // 
+            // bwBPNN
+            // 
+            this.bwBPNN.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwBPNN_DoWork);
+            this.bwBPNN.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwBPNN_RunWorkerCompleted);
+            // 
             // FormHandWriting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1523,6 +1529,7 @@
         private System.Windows.Forms.NumericUpDown numLayers;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Button btnTraining;
+        private System.ComponentModel.BackgroundWorker bwBPNN;
     }
 }
 

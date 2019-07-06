@@ -1,4 +1,5 @@
-﻿using FeatureExtraction.Moments;
+﻿using BackpropagationNeuralNetwork;
+using FeatureExtraction.Moments;
 using handwriting_recognition.DTO;
 using Preprocessing;
 using ProfileProjection;
@@ -22,6 +23,8 @@ namespace handwriting_recognition
         private string _action;
         private Preprocessing.Preprocessing preprocessing;
         private ProfileProjection.ProfileProjection profileProjection;
+        private BackpropagationNeuralNetwork.BackpropagationNeuralNetwork backpropagationNeuralNetwork;
+
         public FormHandWriting()
         {
             InitializeComponent();
@@ -58,7 +61,9 @@ namespace handwriting_recognition
                             imageDTO.Raw = new Bitmap(f);
                             imageDTO.ClassName = Path.GetFileName(fd);
                             char c = imageDTO.ClassName[0];
-                            imageDTO.PositionOfCharacter = new Util().charToIntegerPosition(c);//to get class integer of character (e.g: 'A' is class 0, 'B' is class 1, etc
+                            imageDTO.PositionOfCharacter = Util.charToIntegerPosition(c);//to get class integer of character (e.g: 'A' is class 0, 'B' is class 1, etc
+                            var binaryArrays = Util.digitArr(imageDTO.PositionOfCharacter);
+                            imageDTO.ArrayBinaryofClass = binaryArrays;
                             imageDTO.FileName = Path.GetFileName(f);
                             imageList.Images.Add(imageDTO.ClassName, new Bitmap(imageDTO.Raw));
                             _dataTraining.Add(imageDTO);
@@ -175,13 +180,12 @@ namespace handwriting_recognition
 
         private void btnFeatureExtractionTraining_Click(object sender, EventArgs e)
         {
-            dataFiturTraining.ColumnCount = 10;
+            dataFiturTraining.ColumnCount = Constants.COLUMNNAME.Length;
             btnOpenImageTraining.Enabled = false;
             btnFeatureExtractionTraining.Enabled = false;
-            string[] columnName = { "ClassNames", "FileName", "Position of Character", "Moments Hu 0", "Moments Hu 1", "Moments Hu 2", "Moments Hu 3", "Moments Hu 4", "Moments Hu 5", "Moments Hu 6" };
-            for(int i = 0; i < columnName.Length; i++)
+            for(int i = 0; i < Constants.COLUMNNAME.Length; i++)
             {
-                dataFiturTraining.Columns[i].Name = columnName[i];
+                dataFiturTraining.Columns[i].Name = Constants.COLUMNNAME[i];
                 dataFiturTraining.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
 
@@ -237,12 +241,13 @@ namespace handwriting_recognition
             });
             for(int i = 0; i < data.Count; i++)
             {
-                string[] rows = new string[data[i].MomentHu.Length+3];
+                string[] rows = new string[data[i].MomentHu.Length+4];
                 rows[0] = data[i].ClassName;
                 rows[1] = data[i].FileName;
                 rows[2] = data[i].PositionOfCharacter.ToString();
+                rows[3] =  string.Join(",",data[i].ArrayBinaryofClass);
                 int k = 0;
-                for(int j = 3; j < rows.Length; j++)
+                for(int j = 4; j < rows.Length; j++)
                 {
                     rows[j] = data[i].MomentHu[k].ToString();
                     k++;
@@ -296,7 +301,9 @@ namespace handwriting_recognition
                             imageDTO.Raw = new Bitmap(f);
                             imageDTO.ClassName = Path.GetFileName(fd);
                             char c = imageDTO.ClassName[0];
-                            imageDTO.PositionOfCharacter = new Util().charToIntegerPosition(c);//to get class integer of character (e.g: 'A' is class 0, 'B' is class 1, etc
+                            imageDTO.PositionOfCharacter = Util.charToIntegerPosition(c);//to get class integer of character (e.g: 'A' is class 0, 'B' is class 1, etc
+                            var binaryArrays = Util.digitArr(imageDTO.PositionOfCharacter);
+                            imageDTO.ArrayBinaryofClass = binaryArrays;
                             imageDTO.FileName = Path.GetFileName(f);
                             imageList.Images.Add(imageDTO.ClassName, new Bitmap(imageDTO.Raw));
                             _dataTesting.Add(imageDTO);
@@ -323,10 +330,9 @@ namespace handwriting_recognition
             btnOpenImageTesting.Enabled = false;
             btnFeatureExtractionTesting.Enabled = false;
             dataFiturTesting.ColumnCount = 10;
-            string[] columnName = { "ClassNames", "FileName", "Position of Character", "Moments Hu 0", "Moments Hu 1", "Moments Hu 2", "Moments Hu 3", "Moments Hu 4", "Moments Hu 5", "Moments Hu 6" };
-            for (int i = 0; i < columnName.Length; i++)
+            for (int i = 0; i < Constants.COLUMNNAME.Length; i++)
             {
-                dataFiturTesting.Columns[i].Name = columnName[i];
+                dataFiturTesting.Columns[i].Name = Constants.COLUMNNAME[i];
                 dataFiturTesting.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
             bwExtractionFeature.RunWorkerAsync();
@@ -334,8 +340,38 @@ namespace handwriting_recognition
 
         private void btnTraining_Click(object sender, EventArgs e)
         {
+            _action = "training BPNN";
+
+        }
+
+        private void bwBPNN_DoWork(object sender, DoWorkEventArgs e)
+        {
+            e.Result = BackgroundBPNNLogicMethod();
+        }
+
+        private void bwBPNN_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+
+        }
+
+        private int BackgroundBPNNLogicMethod()
+        {
+            int result = 0;
+            switch (_action)
+            {
+                case "training":
+                    backgroundBPNNTraining(_dataTraining);
+                    break;
+                case "testing":
+                     backgroundExtractionFeature(_dataTesting, dataFiturTesting);
+                    break;
+            }
+            return result;
+        }
+
+        private void backgroundBPNNTraining(List<ImageDTO> data)
+        {
 
         }
     }
-
 }

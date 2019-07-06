@@ -16,6 +16,7 @@ namespace handwriting_recognition.DTO
         private double[] _momentHu;
         private string _className;
         private int _positionOfCharacter;
+        private int[] _arrayBinaryofClass;
         private string _fileName;
         private Bitmap[] _horizontalCutt;
         private Bitmap[] _verticalCutt;
@@ -30,5 +31,6 @@ namespace handwriting_recognition.DTO
         public Bitmap[] HorizontalCutt { get => _horizontalCutt; set => _horizontalCutt = value; }
         public Bitmap[] VerticalCutt { get => _verticalCutt; set => _verticalCutt = value; }
         public int PositionOfCharacter { get => _positionOfCharacter; set => _positionOfCharacter = value; }
+        public int[] ArrayBinaryofClass { get => _arrayBinaryofClass; set => _arrayBinaryofClass = value; }
     }
 }
