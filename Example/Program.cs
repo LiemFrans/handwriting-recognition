@@ -17,6 +17,7 @@ namespace Example
 {
     class Program
     {
+        /*
         [STAThread]
         static void Main(string[] args)
         {
@@ -73,14 +74,14 @@ namespace Example
                     {
                         Console.WriteLine("Moments " + i + " : " + moments[i]);
                     }
-                    */
+                    
 
 
                     Console.ReadKey();
                 }
             }
-        }
-        /*
+        }*/
+        
         static void Main(string[] args)
         {
             Console.WriteLine("\nBegin neural network back-propagation demo");
@@ -141,7 +142,7 @@ namespace Example
             Console.WriteLine("\nEnd back-propagation demo\n");
             Console.ReadLine();
         } // Main
-        */
+        
         public static void ShowMatrix(double[][] matrix, int numRows,
           int decimals, bool indices)
         {

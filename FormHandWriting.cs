@@ -221,7 +221,7 @@ namespace handwriting_recognition
                 {
                     case "training":
                         btnOpenImageTraining.Enabled = true;
-                        tlpTesting.Enabled = true;
+                        tlpBPNN.Enabled = true;
                         break;
                     case "testing":
                         btnOpenImageTesting.Enabled = true;
@@ -329,7 +329,7 @@ namespace handwriting_recognition
             _action = "testing";
             btnOpenImageTesting.Enabled = false;
             btnFeatureExtractionTesting.Enabled = false;
-            dataFiturTesting.ColumnCount = 10;
+            dataFiturTesting.ColumnCount = Constants.COLUMNNAME.Length;
             for (int i = 0; i < Constants.COLUMNNAME.Length; i++)
             {
                 dataFiturTesting.Columns[i].Name = Constants.COLUMNNAME[i];
@@ -341,8 +341,20 @@ namespace handwriting_recognition
         private void btnTraining_Click(object sender, EventArgs e)
         {
             _action = "training BPNN";
-
+            btnTraining.Enabled = false;
+            numHiddenNeuron.Enabled = false;
+            numLayers.Enabled = false;
+            numLearningRate.Enabled = false;
+            numMomentum.Enabled = false;
+            numMaxEpochs.Enabled = false;
+            bwBPNN.RunWorkerAsync();
         }
+
+        /// <summary>
+        /// FORM PELARIHAN BPNN RESULT WEIGHT BPNN
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void bwBPNN_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -351,7 +363,23 @@ namespace handwriting_recognition
 
         private void bwBPNN_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-
+            if (e.Error != null) MessageBox.Show(e.Error.Message);
+            else
+            {
+                MessageBox.Show("Done");
+                switch (_action)
+                {
+                    case "training BPNN":
+                        btnTraining.Enabled = true;
+                        numHiddenNeuron.Enabled = true;
+                        numLayers.Enabled = true;
+                        numLearningRate.Enabled = true;
+                        numMomentum.Enabled = true;
+                        numMaxEpochs.Enabled = true;
+                        tlpTesting.Enabled = true;
+                        break;
+                }
+            }
         }
 
         private int BackgroundBPNNLogicMethod()
@@ -359,11 +387,8 @@ namespace handwriting_recognition
             int result = 0;
             switch (_action)
             {
-                case "training":
+                case "training BPNN":
                     backgroundBPNNTraining(_dataTraining);
-                    break;
-                case "testing":
-                     backgroundExtractionFeature(_dataTesting, dataFiturTesting);
                     break;
             }
             return result;
@@ -371,7 +396,61 @@ namespace handwriting_recognition
 
         private void backgroundBPNNTraining(List<ImageDTO> data)
         {
+            int inputNeuron = data[0].MomentHu.Length;
+            int hiddenNeuron = Convert.ToInt32(numHiddenNeuron.Value);
+            int layerNeuron = Convert.ToInt32(numLayers.Value);
+            int outputNeuron = Constants.LENGTH_ARRAYS_BITS;
 
+            backpropagationNeuralNetwork = new BackpropagationNeuralNetwork.BackpropagationNeuralNetwork(inputNeuron, hiddenNeuron, outputNeuron, true);
+            int maxEpochs = Convert.ToInt32(numMaxEpochs.Value);
+            double learnRate = Convert.ToDouble(numLearningRate.Value);
+            double momentum = Convert.ToDouble(numMomentum.Value);
+
+            Console.WriteLine("===============================You Can See this Logs at Console===============================");
+
+            Console.WriteLine("Prepearing Load data from Memory");
+            List<double[]> dataTraining = new List<double[]>();
+            for(int i = 0; i < data.Count; i++)
+            {
+                double[] dataRows = new double[inputNeuron+Constants.LENGTH_ARRAYS_BITS];
+                for(int j = 0; j < data[i].MomentHu.Length; j++)
+                {
+                    dataRows[j] = data[i].MomentHu[j];
+                }
+                int k = 0;
+                for(int j = data[i].MomentHu.Length; j< dataRows.Length; j++)
+                {
+                    dataRows[j] = data[i].ArrayBinaryofClass[k];
+                    k++;
+                }
+                dataTraining.Add(dataRows);
+            }
+
+            Console.WriteLine("\nSetting maxEpochs = " + maxEpochs);
+            Console.WriteLine("Setting learnRate = " + learnRate.ToString("F2"));
+            Console.WriteLine("Setting momentum  = " + momentum.ToString("F2"));
+
+            Console.WriteLine("\nStarting training");
+            Layers weights = backpropagationNeuralNetwork.Train(dataTraining.ToArray(), maxEpochs, learnRate, momentum);
+
+            Console.WriteLine("Done");
+            Console.WriteLine("\nFinal neural network model weights and biases:\n");
+
+            Console.WriteLine("Panjang Neurons "+weights.NumNeuron);
+
+            this.Invoke(new MethodInvoker(delegate {
+                dgViewWeightResult.ColumnCount = weights.NumNeuron;
+                for(int i = 0; i < weights.NumNeuron; i++)
+                {
+                    dgViewWeightResult.Columns[i].Name = "Neuron " + i;
+                }
+                string[] arrays = new string[weights.NumNeuron];
+                for(int i = 0; i < weights.NumNeuron; i++)
+                {
+                    arrays[i] = weights.Neurons[i].Value.ToString();
+                }
+                dgViewWeightResult.Rows.Add(arrays);
+            })); 
         }
     }
 }
