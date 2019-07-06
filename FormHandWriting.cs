@@ -52,7 +52,8 @@ namespace handwriting_recognition
                     // create image list and fill it 
                     var imageList = new ImageList { ImageSize = new Size(200, 200) };
                     string[] folders = Directory.GetDirectories(fbd.SelectedPath+"\\");
-                    foreach(string fd in folders)
+                    List<string> classNames = new List<string>();
+                    foreach (string fd in folders)
                     {
                         string[] files = Directory.GetFiles(fd);
                         foreach(string f in files)
@@ -62,14 +63,15 @@ namespace handwriting_recognition
                             imageDTO.ClassName = Path.GetFileName(fd);
                             char c = imageDTO.ClassName[0];
                             imageDTO.PositionOfCharacter = Util.charToIntegerPosition(c);//to get class integer of character (e.g: 'A' is class 0, 'B' is class 1, etc
-                            var binaryArrays = Util.digitArr(imageDTO.PositionOfCharacter);
+                            var binaryArrays = Util.intToArrays(imageDTO.PositionOfCharacter);
                             imageDTO.ArrayBinaryofClass = binaryArrays;
                             imageDTO.FileName = Path.GetFileName(f);
                             imageList.Images.Add(imageDTO.ClassName, new Bitmap(imageDTO.Raw));
+                            classNames.Add(imageDTO.ClassName);
                             _dataTraining.Add(imageDTO);
                         }
                     }
-                    setImagetoListView(listViewRealImageTraining, imageList);
+                    setImagetoListView(listViewRealImageTraining, imageList, classNames.ToArray());
                     System.Windows.Forms.MessageBox.Show("Data Training found: " + _dataTraining.Count.ToString(), "Message");
                 }
             }
@@ -78,13 +80,13 @@ namespace handwriting_recognition
             numWeightGaussian.Enabled = true;
         }
 
-        private void setImagetoListView (ListView listView, ImageList imageList)
+        private void setImagetoListView (ListView listView, ImageList imageList, string[] classNames)
         {
             imageList.ImageSize = new Size(48, 48);
             listView.View = View.LargeIcon;
             for (int i = 0; i < imageList.Images.Count; i++)
             {
-                listView.Invoke(new MethodInvoker(delegate { listView.Items.Add(new ListViewItem { ImageIndex = i }); }));
+                listView.Invoke(new MethodInvoker(delegate { listView.Items.Add(new ListViewItem { ImageIndex = i, Text = classNames[i] }); }));
             }
             listView.Invoke(new MethodInvoker(delegate { listView.LargeImageList = imageList; }));
         }
@@ -155,18 +157,19 @@ namespace handwriting_recognition
 
                  imageDTOs[i] = imageDTO;
              });
-
+            List<string> classNames = new List<string>();
             for(int i = 0; i < imageDTOs.Count; i++)
             {
                 ImageDTO imageDTO = imageDTOs[i];
                 imageListGrayscalling.Images.Add(imageDTO.ClassName, imageDTO.GrayScalling);
                 imageListGaussian.Images.Add(imageDTO.ClassName, imageDTO.Gaussian);
                 imageListBinary.Images.Add(imageDTO.ClassName, imageDTO.Binary);
+                classNames.Add(imageDTO.ClassName);
             }
 
-            setImagetoListView(inFormListView[0]/*listViewGrayscallingTraining*/, imageListGrayscalling);
-            setImagetoListView(inFormListView[1]/*listViewGaussianFilteringTraining*/, imageListGaussian);
-            setImagetoListView(inFormListView[2]/*listViewBinerisasiTraining*/, imageListBinary);
+            setImagetoListView(inFormListView[0]/*listViewGrayscallingTraining*/, imageListGrayscalling, classNames.ToArray());
+            setImagetoListView(inFormListView[1]/*listViewGaussianFilteringTraining*/, imageListGaussian, classNames.ToArray());
+            setImagetoListView(inFormListView[2]/*listViewBinerisasiTraining*/, imageListBinary, classNames.ToArray());
             return imageDTOs;
         }
 
@@ -292,6 +295,7 @@ namespace handwriting_recognition
                     // create image list and fill it 
                     var imageList = new ImageList { ImageSize = new Size(200, 200) };
                     string[] folders = Directory.GetDirectories(fbd.SelectedPath + "\\");
+                    List<string> classNames = new List<string>();
                     foreach (string fd in folders)
                     {
                         string[] files = Directory.GetFiles(fd);
@@ -302,14 +306,15 @@ namespace handwriting_recognition
                             imageDTO.ClassName = Path.GetFileName(fd);
                             char c = imageDTO.ClassName[0];
                             imageDTO.PositionOfCharacter = Util.charToIntegerPosition(c);//to get class integer of character (e.g: 'A' is class 0, 'B' is class 1, etc
-                            var binaryArrays = Util.digitArr(imageDTO.PositionOfCharacter);
+                            var binaryArrays = Util.intToArrays(imageDTO.PositionOfCharacter);
                             imageDTO.ArrayBinaryofClass = binaryArrays;
                             imageDTO.FileName = Path.GetFileName(f);
                             imageList.Images.Add(imageDTO.ClassName, new Bitmap(imageDTO.Raw));
+                            classNames.Add(imageDTO.ClassName);
                             _dataTesting.Add(imageDTO);
                         }
                     }
-                    setImagetoListView(listViewRealImageTesting, imageList);
+                    setImagetoListView(listViewRealImageTesting, imageList, classNames.ToArray());
                     System.Windows.Forms.MessageBox.Show("Data Training found: " + _dataTesting.Count.ToString(), "Message");
                 }
             }
@@ -378,6 +383,9 @@ namespace handwriting_recognition
                         numMaxEpochs.Enabled = true;
                         tlpTesting.Enabled = true;
                         break;
+                    case "testing BPNN":
+                        btnTestingData.Enabled = true;
+                        break;
                 }
             }
         }
@@ -389,6 +397,9 @@ namespace handwriting_recognition
             {
                 case "training BPNN":
                     backgroundBPNNTraining(_dataTraining);
+                    break;
+                case "testing BPNN":
+                    backgroundBPNNTestingEachCharacter(_dataTesting);
                     break;
             }
             return result;
@@ -437,20 +448,66 @@ namespace handwriting_recognition
             Console.WriteLine("\nFinal neural network model weights and biases:\n");
 
             Console.WriteLine("Panjang Neurons "+weights.NumNeuron);
+            if (checkDisplayWeight.Checked)
+            {
+                this.Invoke(new MethodInvoker(delegate
+                {
+                    dgViewWeightResult.ColumnCount = weights.NumNeuron;
+                    for (int i = 0; i < weights.NumNeuron; i++)
+                    {
+                        dgViewWeightResult.Columns[i].Name = "Neuron " + i;
+                    }
+                    string[] arrays = new string[weights.NumNeuron];
+                    for (int i = 0; i < weights.NumNeuron; i++)
+                    {
+                        arrays[i] = weights.Neurons[i].Value.ToString();
+                    }
+                    dgViewWeightResult.Rows.Add(arrays);
+                }));
+            }
+        }
 
-            this.Invoke(new MethodInvoker(delegate {
-                dgViewWeightResult.ColumnCount = weights.NumNeuron;
-                for(int i = 0; i < weights.NumNeuron; i++)
+        private void backgroundBPNNTestingEachCharacter(List<ImageDTO> data)
+        {
+            Console.WriteLine("Prepearing Load data from Memory");
+            List<double[]> dataTesting = new List<double[]>();
+            int inputNeuron = data[0].MomentHu.Length;
+            for (int i = 0; i < data.Count; i++)
+            {
+                double[] dataRows = new double[inputNeuron + Constants.LENGTH_ARRAYS_BITS];
+                for (int j = 0; j < data[i].MomentHu.Length; j++)
                 {
-                    dgViewWeightResult.Columns[i].Name = "Neuron " + i;
+                    dataRows[j] = data[i].MomentHu[j];
                 }
-                string[] arrays = new string[weights.NumNeuron];
-                for(int i = 0; i < weights.NumNeuron; i++)
+                int k = 0;
+                for (int j = data[i].MomentHu.Length; j < dataRows.Length; j++)
                 {
-                    arrays[i] = weights.Neurons[i].Value.ToString();
+                    dataRows[j] = data[i].ArrayBinaryofClass[k];
+                    k++;
                 }
-                dgViewWeightResult.Rows.Add(arrays);
-            })); 
+                dataTesting.Add(dataRows);
+            }
+            double accuracy = backpropagationNeuralNetwork.Accuracy(dataTesting.ToArray());
+            Console.WriteLine("=========================================================");
+            Console.WriteLine(accuracy);
+
+            var result = backpropagationNeuralNetwork.ResultTesting;
+            var imageListTesting = new ImageList { ImageSize = new Size(200, 200) };
+            string[] arrayResults = new string[result.Length];
+            for (int i = 0; i < result.Length; i++)
+            {
+                ImageDTO imageDTO = data[i];
+                imageListTesting.Images.Add(imageDTO.ClassName, imageDTO.GrayScalling);
+                arrayResults[i] = "Real "+imageDTO.ClassName+", predicate = "+Util.integerToChar(result[i]);
+            }
+            setImagetoListView(listViewTestingData, imageListTesting, arrayResults);
+        }
+
+        private void btnTestingData_Click(object sender, EventArgs e)
+        {
+            _action = "testing BPNN";
+            btnTestingData.Enabled = false;
+            bwBPNN.RunWorkerAsync();
         }
     }
 }

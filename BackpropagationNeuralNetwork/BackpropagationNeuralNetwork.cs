@@ -12,6 +12,8 @@ namespace BackpropagationNeuralNetwork
         private int _numHiddenNeuron;
         private int _numOutputNeuron;
 
+        private int[] _resultTesting;
+
         private Layers _inputs;
         private Layers _hiddenOutputs;
         private Layers _outputs;
@@ -22,6 +24,8 @@ namespace BackpropagationNeuralNetwork
         private Random _rng;
 
         private bool _parallelOptimized;
+
+        public int[] ResultTesting { get => _resultTesting; set => _resultTesting = value; }
 
         public BackpropagationNeuralNetwork(int inputNeuron, int hiddenNeuron, int outputNeuron, bool parallelOptimized = false)
         {
@@ -448,6 +452,8 @@ namespace BackpropagationNeuralNetwork
             Layers tValues = new Layers(_numOutputNeuron, nameof(tValues)); // targets
             Layers yValues;
 
+            List<int> arraysResult = new List<int>();
+
             for(int i = 0; i < testData.Length; ++i)
             {
                 Array.Copy(inputLayers[i].Neurons, xValues.Neurons, _numInputNeuron);
@@ -456,11 +462,15 @@ namespace BackpropagationNeuralNetwork
                 int maxIndex = MaxIndex(yValues);
                 int tMaxIndex = MaxIndex(tValues);
 
+                arraysResult.Add(maxIndex);
+
                 if (maxIndex == tMaxIndex)
                     ++numCorrect;
                 else
                     ++numWrong;
             }
+
+            ResultTesting = arraysResult.ToArray();
             return (numCorrect*1.0)/(numCorrect+numWrong);
         }
 

@@ -10,16 +10,24 @@ namespace handwriting_recognition
     {
         public static int charToIntegerPosition(char c)
         {
-            return char.ToUpper(c) - 64;
+            return Array.IndexOf(Constants.ALPHA,c);
         }
 
-        public static int[] digitArr(int n)
+        public static char integerToChar(int i)
         {
-            string s = Convert.ToString(n, 2);
-            int[] bits = s.PadLeft(Constants.LENGTH_ARRAYS_BITS, '0') // Add 0's from left
-             .Select(c => int.Parse(c.ToString())) // convert each char to int
-             .ToArray(); // Convert IEnumerable from select to Array
-            return bits;
+            return Constants.ALPHA[i];
+        }
+
+        public static int[] intToArrays(int n)
+        {
+            int[] arrays = Enumerable.Repeat(-1, Constants.LENGTH_ARRAYS_BITS).ToArray();
+            arrays[n] = 1;
+            return arrays;
+        }
+
+        public static int arraysToInt(int[] arrays)
+        {
+            return Array.IndexOf(arrays, 1);
         }
     }
 }

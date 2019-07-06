@@ -87,7 +87,6 @@
             this.btnTraining = new System.Windows.Forms.Button();
             this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
             this.dgViewWeightResult = new System.Windows.Forms.DataGridView();
-            this.label28 = new System.Windows.Forms.Label();
             this.tabDataTesting = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.tlpTesting = new System.Windows.Forms.TableLayoutPanel();
@@ -125,6 +124,14 @@
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnTesting = new System.Windows.Forms.Button();
+            this.tabDataToTestingBPNN = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
+            this.listViewTestingData = new System.Windows.Forms.ListView();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnTestingData = new System.Windows.Forms.Button();
+            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
+            this.label28 = new System.Windows.Forms.Label();
+            this.checkDisplayWeight = new System.Windows.Forms.CheckBox();
             this.tabBase.SuspendLayout();
             this.tabHome.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -163,6 +170,10 @@
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabDataToTestingBPNN.SuspendLayout();
+            this.tableLayoutPanel14.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
+            this.tableLayoutPanel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabBase
@@ -171,6 +182,7 @@
             this.tabBase.Controls.Add(this.tabDataTraining);
             this.tabBase.Controls.Add(this.tabDataTrainingBPNN);
             this.tabBase.Controls.Add(this.tabDataTesting);
+            this.tabBase.Controls.Add(this.tabDataToTestingBPNN);
             this.tabBase.Controls.Add(this.tabTesting);
             this.tabBase.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabBase.Location = new System.Drawing.Point(0, 0);
@@ -925,7 +937,7 @@
             this.tableLayoutPanel21.ColumnCount = 1;
             this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel21.Controls.Add(this.dgViewWeightResult, 0, 1);
-            this.tableLayoutPanel21.Controls.Add(this.label28, 0, 0);
+            this.tableLayoutPanel21.Controls.Add(this.tableLayoutPanel16, 0, 0);
             this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel21.Location = new System.Drawing.Point(3, 65);
             this.tableLayoutPanel21.Name = "tableLayoutPanel21";
@@ -943,18 +955,6 @@
             this.dgViewWeightResult.Name = "dgViewWeightResult";
             this.dgViewWeightResult.Size = new System.Drawing.Size(1300, 545);
             this.dgViewWeightResult.TabIndex = 1;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(3, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(1300, 51);
-            this.label28.TabIndex = 0;
-            this.label28.Text = "Bobot Akhir BPNN";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabDataTesting
             // 
@@ -1358,6 +1358,102 @@
             this.btnTesting.Text = "button1";
             this.btnTesting.UseVisualStyleBackColor = true;
             // 
+            // tabDataToTestingBPNN
+            // 
+            this.tabDataToTestingBPNN.Controls.Add(this.tableLayoutPanel14);
+            this.tabDataToTestingBPNN.Location = new System.Drawing.Point(4, 22);
+            this.tabDataToTestingBPNN.Name = "tabDataToTestingBPNN";
+            this.tabDataToTestingBPNN.Size = new System.Drawing.Size(1312, 670);
+            this.tabDataToTestingBPNN.TabIndex = 5;
+            this.tabDataToTestingBPNN.Text = "Data Pengujian BPNN ";
+            this.tabDataToTestingBPNN.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel14
+            // 
+            this.tableLayoutPanel14.ColumnCount = 1;
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel14.Controls.Add(this.listViewTestingData, 0, 1);
+            this.tableLayoutPanel14.Controls.Add(this.tableLayoutPanel15, 0, 0);
+            this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
+            this.tableLayoutPanel14.RowCount = 2;
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.268657F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.73135F));
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(1312, 670);
+            this.tableLayoutPanel14.TabIndex = 0;
+            // 
+            // listViewTestingData
+            // 
+            this.listViewTestingData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewTestingData.Location = new System.Drawing.Point(3, 45);
+            this.listViewTestingData.Name = "listViewTestingData";
+            this.listViewTestingData.Size = new System.Drawing.Size(1306, 622);
+            this.listViewTestingData.TabIndex = 0;
+            this.listViewTestingData.UseCompatibleStateImageBehavior = false;
+            // 
+            // tableLayoutPanel15
+            // 
+            this.tableLayoutPanel15.ColumnCount = 2;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel15.Controls.Add(this.btnTestingData, 0, 0);
+            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            this.tableLayoutPanel15.RowCount = 1;
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(1306, 36);
+            this.tableLayoutPanel15.TabIndex = 1;
+            // 
+            // btnTestingData
+            // 
+            this.btnTestingData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnTestingData.Location = new System.Drawing.Point(3, 3);
+            this.btnTestingData.Name = "btnTestingData";
+            this.btnTestingData.Size = new System.Drawing.Size(647, 30);
+            this.btnTestingData.TabIndex = 0;
+            this.btnTestingData.Text = "Testing Data";
+            this.btnTestingData.UseVisualStyleBackColor = true;
+            this.btnTestingData.Click += new System.EventHandler(this.btnTestingData_Click);
+            // 
+            // tableLayoutPanel16
+            // 
+            this.tableLayoutPanel16.ColumnCount = 2;
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel16.Controls.Add(this.label28, 0, 0);
+            this.tableLayoutPanel16.Controls.Add(this.checkDisplayWeight, 1, 0);
+            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
+            this.tableLayoutPanel16.RowCount = 1;
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(1300, 45);
+            this.tableLayoutPanel16.TabIndex = 2;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(3, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(644, 45);
+            this.label28.TabIndex = 1;
+            this.label28.Text = "Bobot Akhir BPNN";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // checkDisplayWeight
+            // 
+            this.checkDisplayWeight.AutoSize = true;
+            this.checkDisplayWeight.Location = new System.Drawing.Point(653, 3);
+            this.checkDisplayWeight.Name = "checkDisplayWeight";
+            this.checkDisplayWeight.Size = new System.Drawing.Size(190, 17);
+            this.checkDisplayWeight.TabIndex = 2;
+            this.checkDisplayWeight.Text = "Tampilkan bobot akhir pada table?";
+            this.checkDisplayWeight.UseVisualStyleBackColor = true;
+            // 
             // FormHandWriting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1400,7 +1496,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numHiddenNeuron)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLayers)).EndInit();
             this.tableLayoutPanel21.ResumeLayout(false);
-            this.tableLayoutPanel21.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgViewWeightResult)).EndInit();
             this.tabDataTesting.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
@@ -1416,6 +1511,11 @@
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabDataToTestingBPNN.ResumeLayout(false);
+            this.tableLayoutPanel14.ResumeLayout(false);
+            this.tableLayoutPanel15.ResumeLayout(false);
+            this.tableLayoutPanel16.ResumeLayout(false);
+            this.tableLayoutPanel16.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1502,7 +1602,6 @@
         private System.ComponentModel.BackgroundWorker bwBPNN;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel21;
         private System.Windows.Forms.DataGridView dgViewWeightResult;
-        private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Button btnTraining;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.NumericUpDown numHiddenNeuron;
@@ -1518,6 +1617,14 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
         private System.Windows.Forms.Button btnTesting;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TabPage tabDataToTestingBPNN;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
+        private System.Windows.Forms.ListView listViewTestingData;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
+        private System.Windows.Forms.Button btnTestingData;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.CheckBox checkDisplayWeight;
     }
 }
 
