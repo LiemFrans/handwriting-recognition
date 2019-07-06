@@ -82,6 +82,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="BackpropagationNeuralNetwork\BackpropagationNeuralNetwork.csproj">
+      <Project>{476F4E10-6242-403C-8668-2F1E0864660E}</Project>
+      <Name>BackpropagationNeuralNetwork</Name>
+    </ProjectReference>
     <ProjectReference Include="FeatureExtraction\FeatureExtraction.csproj">
       <Project>{3C6AF419-1FFB-4BF9-80E8-21CED7629847}</Project>
       <Name>FeatureExtraction</Name>
