@@ -435,6 +435,18 @@ namespace BackpropagationNeuralNetwork
             return bestWeights;
         }//Train
 
+        public int Predicate(double[] data)
+        {
+            Layers inputLayers = new Layers(data.Length, "inputLayers");
+            for(int i = 0; i < data.Length; i++)
+            {
+                inputLayers.Neurons[i].Value = data[i];
+            }
+            Layers yValues = this.ComputeOutputs(inputLayers);
+
+            return MaxIndex(yValues);
+        }
+
         public double Accuracy(double[][] testData)
         {
             Layers[] inputLayers = new Layers[testData.Length];

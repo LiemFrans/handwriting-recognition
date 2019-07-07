@@ -16,6 +16,7 @@ namespace Preprocessing
         private Bitmap _grayscalingImage;
         private Bitmap _filteringImage;
         private Bitmap _averageBinaryImage;
+        private Bitmap _removeBorderImage;
 
         public Preprocessing(Bitmap input, int lengthGaussianFilter, double weightGaussianFilter)
         {
@@ -32,7 +33,11 @@ namespace Preprocessing
             var averageBinary = new AverageBinary(_filteringImage);
             _averageBinaryImage = averageBinary.Output;
 
-            _output = _averageBinaryImage;
+            var removeBorder = new RemoveBorder(_averageBinaryImage);
+
+            _removeBorderImage = removeBorder.Output;
+
+            _output = RemoveBorderImage;
         }
 
         public Bitmap Output
@@ -66,5 +71,7 @@ namespace Preprocessing
                 return _averageBinaryImage;
             }
         }
+
+        public Bitmap RemoveBorderImage { get => _removeBorderImage; }
     }
 }

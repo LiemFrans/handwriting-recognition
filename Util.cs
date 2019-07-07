@@ -20,7 +20,7 @@ namespace handwriting_recognition
 
         public static int[] intToArrays(int n)
         {
-            int[] arrays = Enumerable.Repeat(-1, Constants.LENGTH_ARRAYS_BITS).ToArray();
+            int[] arrays = Enumerable.Repeat(0, Constants.LENGTH_ARRAYS_BITS).ToArray();
             arrays[n] = 1;
             return arrays;
         }
@@ -29,5 +29,6 @@ namespace handwriting_recognition
         {
             return Array.IndexOf(arrays, 1);
         }
+
     }
 }
