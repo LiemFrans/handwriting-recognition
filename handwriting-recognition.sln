@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "handwriting-recognition", "handwriting-recognition.csproj", "{952B64A6-56DC-4611-B990-63759C9A6F34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackpropagationNeuralNetwork", "BackpropagationNeuralNetwork\BackpropagationNeuralNetwork.csproj", "{476F4E10-6242-403C-8668-2F1E0864660E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{B1570851-99A5-41B0-91E0-319A30D22813}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Preprocessing", "Preprocessing\Preprocessing.csproj", "{18306265-A2F7-420C-96F3-91942552C7A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureExtraction", "FeatureExtraction\FeatureExtraction.csproj", "{3C6AF419-1FFB-4BF9-80E8-21CED7629847}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProfileProjection", "ProfileProjection\ProfileProjection.csproj", "{3B904F68-9686-4CAD-88F3-DB1402EE6769}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{952B64A6-56DC-4611-B990-63759C9A6F34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{952B64A6-56DC-4611-B990-63759C9A6F34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{952B64A6-56DC-4611-B990-63759C9A6F34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{952B64A6-56DC-4611-B990-63759C9A6F34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{476F4E10-6242-403C-8668-2F1E0864660E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{476F4E10-6242-403C-8668-2F1E0864660E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{476F4E10-6242-403C-8668-2F1E0864660E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{476F4E10-6242-403C-8668-2F1E0864660E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1570851-99A5-41B0-91E0-319A30D22813}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1570851-99A5-41B0-91E0-319A30D22813}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1570851-99A5-41B0-91E0-319A30D22813}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1570851-99A5-41B0-91E0-319A30D22813}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18306265-A2F7-420C-96F3-91942552C7A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18306265-A2F7-420C-96F3-91942552C7A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18306265-A2F7-420C-96F3-91942552C7A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18306265-A2F7-420C-96F3-91942552C7A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C6AF419-1FFB-4BF9-80E8-21CED7629847}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C6AF419-1FFB-4BF9-80E8-21CED7629847}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C6AF419-1FFB-4BF9-80E8-21CED7629847}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C6AF419-1FFB-4BF9-80E8-21CED7629847}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B904F68-9686-4CAD-88F3-DB1402EE6769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B904F68-9686-4CAD-88F3-DB1402EE6769}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B904F68-9686-4CAD-88F3-DB1402EE6769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B904F68-9686-4CAD-88F3-DB1402EE6769}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8ACB94F7-5AD0-4AE3-8BD0-2289743B89E5}
+	EndGlobalSection
+EndGlobal
