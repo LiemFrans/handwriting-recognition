@@ -152,6 +152,11 @@
             this.label39 = new System.Windows.Forms.Label();
             this.numHorizontally = new System.Windows.Forms.NumericUpDown();
             this.dataFiturParagraf = new System.Windows.Forms.DataGridView();
+            this.tabTestingDataParagraph = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.listViewParagraph = new System.Windows.Forms.ListView();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnTestingDataParagraph = new System.Windows.Forms.Button();
             this.imageListReal = new System.Windows.Forms.ImageList(this.components);
             this.bwLoadingPreprocessing = new System.ComponentModel.BackgroundWorker();
             this.imageListGrayscale = new System.Windows.Forms.ImageList(this.components);
@@ -161,11 +166,6 @@
             this.bwExtractionFeature = new System.ComponentModel.BackgroundWorker();
             this.bwBPNN = new System.ComponentModel.BackgroundWorker();
             this.bwParagraph = new System.ComponentModel.BackgroundWorker();
-            this.tabTestingDataParagraph = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.listViewParagraph = new System.Windows.Forms.ListView();
-            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnTestingDataParagraph = new System.Windows.Forms.Button();
             this.tabBase.SuspendLayout();
             this.tabHome.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -884,21 +884,32 @@
             // 
             // numLearningRate
             // 
+            this.numLearningRate.DecimalPlaces = 5;
             this.numLearningRate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.numLearningRate.Increment = new decimal(new int[] {
             1,
             0,
             0,
-            196608});
+            327680});
             this.numLearningRate.Location = new System.Drawing.Point(829, 3);
             this.numLearningRate.Maximum = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            this.numLearningRate.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            327680});
             this.numLearningRate.Name = "numLearningRate";
             this.numLearningRate.Size = new System.Drawing.Size(112, 20);
             this.numLearningRate.TabIndex = 7;
+            this.numLearningRate.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            327680});
             // 
             // label30
             // 
@@ -915,13 +926,23 @@
             this.numMaxEpochs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.numMaxEpochs.Location = new System.Drawing.Point(593, 3);
             this.numMaxEpochs.Maximum = new decimal(new int[] {
-            1000,
+            100000,
+            0,
+            0,
+            0});
+            this.numMaxEpochs.Minimum = new decimal(new int[] {
+            1,
             0,
             0,
             0});
             this.numMaxEpochs.Name = "numMaxEpochs";
             this.numMaxEpochs.Size = new System.Drawing.Size(112, 20);
             this.numMaxEpochs.TabIndex = 5;
+            this.numMaxEpochs.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label29
             // 
@@ -947,9 +968,24 @@
             // 
             this.numHiddenNeuron.Dock = System.Windows.Forms.DockStyle.Fill;
             this.numHiddenNeuron.Location = new System.Drawing.Point(121, 3);
+            this.numHiddenNeuron.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numHiddenNeuron.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numHiddenNeuron.Name = "numHiddenNeuron";
             this.numHiddenNeuron.Size = new System.Drawing.Size(112, 20);
             this.numHiddenNeuron.TabIndex = 2;
+            this.numHiddenNeuron.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label27
             // 
@@ -965,9 +1001,24 @@
             // 
             this.numLayers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.numLayers.Location = new System.Drawing.Point(357, 3);
+            this.numLayers.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numLayers.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numLayers.Name = "numLayers";
             this.numLayers.Size = new System.Drawing.Size(112, 20);
             this.numLayers.TabIndex = 0;
+            this.numLayers.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // btnTraining
             // 
@@ -991,21 +1042,32 @@
             // 
             // numMomentum
             // 
+            this.numMomentum.DecimalPlaces = 5;
             this.numMomentum.Dock = System.Windows.Forms.DockStyle.Fill;
             this.numMomentum.Increment = new decimal(new int[] {
             1,
             0,
             0,
-            196608});
+            327680});
             this.numMomentum.Location = new System.Drawing.Point(1065, 3);
             this.numMomentum.Maximum = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            this.numMomentum.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            327680});
             this.numMomentum.Name = "numMomentum";
             this.numMomentum.Size = new System.Drawing.Size(112, 20);
             this.numMomentum.TabIndex = 9;
+            this.numMomentum.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            327680});
             // 
             // tableLayoutPanel21
             // 
@@ -1805,56 +1867,6 @@
             this.dataFiturParagraf.Size = new System.Drawing.Size(647, 297);
             this.dataFiturParagraf.TabIndex = 1;
             // 
-            // imageListReal
-            // 
-            this.imageListReal.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.imageListReal.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageListReal.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // bwLoadingPreprocessing
-            // 
-            this.bwLoadingPreprocessing.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwLoadingPreprocessing_DoWork);
-            this.bwLoadingPreprocessing.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwLoadingPreprocessing_RunWorkerCompleted);
-            // 
-            // imageListGrayscale
-            // 
-            this.imageListGrayscale.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.imageListGrayscale.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageListGrayscale.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // imageListFiltering
-            // 
-            this.imageListFiltering.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.imageListFiltering.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageListFiltering.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // imageListBinary
-            // 
-            this.imageListBinary.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.imageListBinary.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageListBinary.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // imageListHorizontalProjector
-            // 
-            this.imageListHorizontalProjector.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.imageListHorizontalProjector.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageListHorizontalProjector.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // bwExtractionFeature
-            // 
-            this.bwExtractionFeature.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwExtractionFeature_DoWork);
-            this.bwExtractionFeature.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwExtractionFeature_RunWorkerCompleted);
-            // 
-            // bwBPNN
-            // 
-            this.bwBPNN.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwBPNN_DoWork);
-            this.bwBPNN.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwBPNN_RunWorkerCompleted);
-            // 
-            // bwParagraph
-            // 
-            this.bwParagraph.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwParagraph_DoWork);
-            this.bwParagraph.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwParagraph_RunWorkerCompleted);
-            // 
             // tabTestingDataParagraph
             // 
             this.tabTestingDataParagraph.Controls.Add(this.tableLayoutPanel9);
@@ -1914,6 +1926,56 @@
             this.btnTestingDataParagraph.Text = "Testing Data";
             this.btnTestingDataParagraph.UseVisualStyleBackColor = true;
             this.btnTestingDataParagraph.Click += new System.EventHandler(this.btnTestingDataParagraph_Click);
+            // 
+            // imageListReal
+            // 
+            this.imageListReal.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.imageListReal.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageListReal.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // bwLoadingPreprocessing
+            // 
+            this.bwLoadingPreprocessing.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwLoadingPreprocessing_DoWork);
+            this.bwLoadingPreprocessing.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwLoadingPreprocessing_RunWorkerCompleted);
+            // 
+            // imageListGrayscale
+            // 
+            this.imageListGrayscale.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.imageListGrayscale.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageListGrayscale.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // imageListFiltering
+            // 
+            this.imageListFiltering.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.imageListFiltering.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageListFiltering.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // imageListBinary
+            // 
+            this.imageListBinary.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.imageListBinary.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageListBinary.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // imageListHorizontalProjector
+            // 
+            this.imageListHorizontalProjector.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.imageListHorizontalProjector.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageListHorizontalProjector.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // bwExtractionFeature
+            // 
+            this.bwExtractionFeature.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwExtractionFeature_DoWork);
+            this.bwExtractionFeature.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwExtractionFeature_RunWorkerCompleted);
+            // 
+            // bwBPNN
+            // 
+            this.bwBPNN.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwBPNN_DoWork);
+            this.bwBPNN.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwBPNN_RunWorkerCompleted);
+            // 
+            // bwParagraph
+            // 
+            this.bwParagraph.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwParagraph_DoWork);
+            this.bwParagraph.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwParagraph_RunWorkerCompleted);
             // 
             // FormHandWriting
             // 
