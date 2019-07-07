@@ -62,7 +62,7 @@ namespace ProfileProjection
             int[] verticalProjection = new int[_input.Height];
             for (int y = 0; y < _input.Height; y++)
             {
-                for (int x = 10; x < _input.Width-10; x++)
+                for (int x = 0; x < _input.Width; x++)
                 {
                     Color color = _input.GetPixel(x, y);
                     Color colorBlack = Color.Black;

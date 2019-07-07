@@ -20,9 +20,12 @@ namespace handwriting_recognition
     {
         private List<ImageDTO> _dataTraining;
         private List<ImageDTO> _dataTesting;
+        private ImageDTO _dataParagraph;
+        private List<ImageDTO> _sliceOfParagraph;
         private string _action;
         private Preprocessing.Preprocessing preprocessing;
         private ProfileProjection.ProfileProjection profileProjection;
+        private ResizeImage resizeImage;
         private BackpropagationNeuralNetwork.BackpropagationNeuralNetwork backpropagationNeuralNetwork;
 
         public FormHandWriting()
@@ -153,7 +156,8 @@ namespace handwriting_recognition
                  preprocessing = new Preprocessing.Preprocessing(imageDTO.Raw, lengthGaussianFilter, weightGaussianFilter);
                  imageDTO.GrayScalling = preprocessing.GrayscalingImage;
                  imageDTO.Gaussian = preprocessing.FilterImage;
-                 imageDTO.Binary = preprocessing.AverageBinaryImage;
+                 resizeImage = new ResizeImage(preprocessing.RemoveBorderImage, Constants.FIX_WIDTH, Constants.FIX_HEIGHT);
+                 imageDTO.Binary = resizeImage.Output;
 
                  imageDTOs[i] = imageDTO;
              });
@@ -228,6 +232,7 @@ namespace handwriting_recognition
                         break;
                     case "testing":
                         btnOpenImageTesting.Enabled = true;
+                        tlpPengujian.Enabled = true;
                         break;
                 }
             }
@@ -263,11 +268,13 @@ namespace handwriting_recognition
         private void numLengthGaussian_ValueChanged(object sender, EventArgs e)
         {
             tbLengthGaussianFilter.Text = numLengthGaussian.Value.ToString();
+            tbLengthGaussianFilterParagraph.Text = numLengthGaussian.Value.ToString();
         }
 
         private void numWeightGaussian_ValueChanged(object sender, EventArgs e)
         {
             tbWeightGaussianFilter.Text = numWeightGaussian.Value.ToString();
+            tbWeightGaussianFilterParagraph.Text = numWeightGaussian.Value.ToString();
         }
 
         /// <summary>
@@ -373,7 +380,7 @@ namespace handwriting_recognition
             {
                 MessageBox.Show("Done");
                 switch (_action)
-                {
+                { 
                     case "training BPNN":
                         btnTraining.Enabled = true;
                         numHiddenNeuron.Enabled = true;
@@ -385,6 +392,7 @@ namespace handwriting_recognition
                         break;
                     case "testing BPNN":
                         btnTestingData.Enabled = true;
+                        tlpPengenalanParagraph.Enabled = true;
                         break;
                 }
             }
@@ -508,6 +516,206 @@ namespace handwriting_recognition
             _action = "testing BPNN";
             btnTestingData.Enabled = false;
             bwBPNN.RunWorkerAsync();
+        }
+    /// <summary>
+    ///  Testing Paragraph
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+        private void btnOpenImageParagraph_Click(object sender, EventArgs e)
+        {
+            btnFeatureExtractionParagraph.Enabled = false;
+            using (OpenFileDialog dlg = new OpenFileDialog())
+            {
+                dlg.Title = "Open Image";
+                dlg.Filter = "Image Files (*.bmp;*.jpg;*.jpeg,*.png)|*.BMP;*.JPG;*.JPEG;*.PNG";
+
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    Bitmap bitmap = new Bitmap(dlg.FileName);
+                    _dataParagraph = new ImageDTO();
+                    _dataParagraph.Raw = bitmap;
+                    _dataParagraph.ClassName = "Paragraph";
+                    _dataParagraph.FileName = dlg.FileName;
+                    btnPreprocessingParagraph.Enabled = true;
+                }
+            }
+        }
+
+        private void btnPreprocessingParagraph_Click(object sender, EventArgs e)
+        {
+            _action = "preprocessing Paragraph";
+            btnPreprocessingParagraph.Enabled = false;
+            btnOpenImageParagraph.Enabled = false;
+            bwParagraph.RunWorkerAsync();
+        }
+
+        private void bwParagraph_DoWork(object sender, DoWorkEventArgs e)
+        {
+            e.Result = BackgroundLogicParagraph();
+        }
+
+        private void bwParagraph_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Error != null) MessageBox.Show(e.Error.Message);
+            else
+            {
+                MessageBox.Show("Done");
+                switch (_action)
+                {
+                    case "preprocessing Paragraph":
+                        btnProfileProjection.Enabled = true;
+                        break;
+                    case "Profile Projection Paragraph":
+                        btnFeatureExtractionParagraph.Enabled = true;
+                        break;
+                    case "Feature Extraction":
+                        btnFeatureExtractionParagraph.Enabled = true;
+                        break;
+                }
+            }
+        }
+
+        private int BackgroundLogicParagraph()
+        {
+            int result = 0;
+            switch (_action)
+            {
+                case "preprocessing Paragraph":
+                    _dataParagraph = backgroundProcessingParagraph(_dataParagraph);
+                    break;
+                case "Profile Projection Paragraph":
+                    _sliceOfParagraph = profileProjectionProcess(_dataParagraph);
+                    break;
+                case "Feature Extraction Paragraph":
+                    _sliceOfParagraph = backgroundExtractionFeature(_sliceOfParagraph, dataFiturParagraf);
+                    break;
+            }
+            return result;
+        }
+
+        private ImageDTO backgroundProcessingParagraph(ImageDTO data)
+        {
+            Bitmap imageRaw = data.Raw;
+            var lengthGaussianFilter = Convert.ToInt32(numLengthGaussian.Value);
+            var weightGaussianFilter = Convert.ToInt32(numWeightGaussian.Value);
+            preprocessing = new Preprocessing.Preprocessing(imageRaw, lengthGaussianFilter, weightGaussianFilter);
+
+            data.GrayScalling = preprocessing.GrayscalingImage;
+            data.Gaussian = preprocessing.FilterImage;
+            data.Binary = preprocessing.RemoveBorderImage;
+
+            var imageListGrayscalling = new ImageList { ImageSize = new Size(1000, 1000) };
+            var imageListGaussian = new ImageList { ImageSize = new Size(1000, 1000) };
+            var imageListBinary = new ImageList { ImageSize = new Size(1000, 1000) };
+
+            imageListGrayscalling.Images.Add(data.ClassName, data.GrayScalling);
+            imageListGaussian.Images.Add(data.ClassName, data.Gaussian);
+            imageListBinary.Images.Add(data.ClassName, data.Binary);
+            var classNames = new List<string>();
+            classNames.Add(data.ClassName);
+
+            setImagetoListView(listViewGrayscallingParagraph, imageListGrayscalling, classNames.ToArray());
+            setImagetoListView(listViewGaussianFilteringParagraph, imageListGaussian, classNames.ToArray());
+            setImagetoListView(listViewBinerisasiParagraph, imageListBinary, classNames.ToArray());
+            return data;
+        }
+
+        private List<ImageDTO> profileProjectionProcess(ImageDTO data)
+        {
+            int vertical = Convert.ToInt32(numVertically.Value);
+            int horizontal = Convert.ToInt32(numHorizontally.Value);
+            Bitmap bitmap = data.Binary;
+            profileProjection = new ProfileProjection.ProfileProjection(bitmap, vertical, horizontal);
+
+            var verticallyImage = profileProjection.ResultImageAfterSliceVertically;
+            var horizontalImage = profileProjection.ResultImageAfterSliceHorizontally;
+
+            var imageListVertical = new ImageList { ImageSize = new Size(1000,200) };
+            List<string> classNamesVertically = new List<string>();
+            int i = 0;
+            foreach(Bitmap v in verticallyImage)
+            {
+                imageListVertical.Images.Add(v);
+                classNamesVertically.Add(i.ToString());
+                i++;
+            }
+
+            var imageListHorizontal = new ImageList { ImageSize = new Size(200, 200) };
+
+            List<ImageDTO> imageSlice = new List<ImageDTO>();
+            List<string> classNamesHorizontally = new List<string>();
+            i = 0;
+
+            foreach (Bitmap h in horizontalImage)
+            {
+                imageListHorizontal.Images.Add(h);
+                ImageDTO imageDTO = new ImageDTO();
+                imageDTO.Binary = h;
+                imageDTO.ClassName = i.ToString();
+                imageDTO.FileName = i.ToString();
+                imageDTO.PositionOfCharacter = i;
+                imageDTO.ArrayBinaryofClass = new int[] { i };
+                imageSlice.Add(imageDTO);
+                classNamesHorizontally.Add(i.ToString());
+                i++;
+            }
+
+            setImagetoListView(listViewVertically, imageListVertical, classNamesVertically.ToArray());
+            setImagetoListView(listViewHorizontally, imageListHorizontal, classNamesHorizontally.ToArray());
+            return imageSlice;
+        }
+
+        private void btnFeatureExtractionParagraph_Click(object sender, EventArgs e)
+        {
+            dataFiturParagraf.ColumnCount = Constants.COLUMNNAME.Length;
+            btnFeatureExtractionParagraph.Enabled = false;
+            for (int i = 0; i < Constants.COLUMNNAME.Length; i++)
+            {
+                dataFiturParagraf.Columns[i].Name = Constants.COLUMNNAME[i];
+                dataFiturParagraf.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+            _action = "Feature Extraction Paragraph";
+            bwParagraph.RunWorkerAsync();
+        }
+
+        private void btnProfileProjection_Click(object sender, EventArgs e)
+        {
+            _action = "Profile Projection Paragraph";
+            btnProfileProjection.Enabled = false;
+            bwParagraph.RunWorkerAsync();
+        }
+
+        private void btnTestingDataParagraph_Click(object sender, EventArgs e)
+        {
+            btnTestingData.Enabled = false;
+            var data = _sliceOfParagraph;
+            Console.WriteLine("Prepearing Load data from Memory");
+            List<int> predicates = new List<int>();
+            int inputNeuron = data[0].MomentHu.Length;
+            for (int i = 0; i < data.Count; i++)
+            {
+                double[] dataRows = new double[inputNeuron + Constants.LENGTH_ARRAYS_BITS];
+                for (int j = 0; j < data[i].MomentHu.Length; j++)
+                {
+                    dataRows[j] = data[i].MomentHu[j];
+                }
+                int predicate = backpropagationNeuralNetwork.Predicate(dataRows);
+
+                predicates.Add(predicate);
+            }
+
+            var result = backpropagationNeuralNetwork.ResultTesting;
+            var imageListTesting = new ImageList { ImageSize = new Size(200, 200) };
+            string[] arrayResults = new string[result.Length];
+            for (int i = 0; i < result.Length; i++)
+            {
+                ImageDTO imageDTO = data[i];
+                imageListTesting.Images.Add(imageDTO.ClassName, imageDTO.GrayScalling);
+                arrayResults[i] = "index "+ imageDTO.ClassName + ", predicate = " + Util.integerToChar(predicates[i]);
+            }
+            setImagetoListView(listViewTestingData, imageListTesting, arrayResults);
+            btnTestingData.Enabled = true;
         }
     }
 }
