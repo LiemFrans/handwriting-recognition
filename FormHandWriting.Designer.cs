@@ -122,12 +122,10 @@
             this.tabTesting = new System.Windows.Forms.TabPage();
             this.tlpPengenalanParagraph = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
-            this.listViewRealImageParagraph = new System.Windows.Forms.ListView();
             this.btnOpenImageParagraph = new System.Windows.Forms.Button();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
-            this.listViewBinerisasiParagraph = new System.Windows.Forms.ListView();
-            this.listViewGaussianFilteringParagraph = new System.Windows.Forms.ListView();
-            this.listViewGrayscallingParagraph = new System.Windows.Forms.ListView();
+            this.btnShowImageBinary = new System.Windows.Forms.Button();
+            this.btnShowImageGaussianFiltering = new System.Windows.Forms.Button();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
@@ -137,6 +135,7 @@
             this.label37 = new System.Windows.Forms.Label();
             this.tbWeightGaussianFilterParagraph = new System.Windows.Forms.TextBox();
             this.tbLengthGaussianFilterParagraph = new System.Windows.Forms.TextBox();
+            this.btnShowImageGrayscalling = new System.Windows.Forms.Button();
             this.btnPreprocessingParagraph = new System.Windows.Forms.Button();
             this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
             this.btnFeatureExtractionParagraph = new System.Windows.Forms.Button();
@@ -166,6 +165,7 @@
             this.bwExtractionFeature = new System.ComponentModel.BackgroundWorker();
             this.bwBPNN = new System.ComponentModel.BackgroundWorker();
             this.bwParagraph = new System.ComponentModel.BackgroundWorker();
+            this.btnShowRealImage = new System.Windows.Forms.Button();
             this.tabBase.SuspendLayout();
             this.tabHome.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -1495,10 +1495,10 @@
             this.tableLayoutPanel13.ColumnCount = 2;
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.23077F));
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.76923F));
-            this.tableLayoutPanel13.Controls.Add(this.listViewRealImageParagraph, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.btnOpenImageParagraph, 0, 1);
             this.tableLayoutPanel13.Controls.Add(this.tableLayoutPanel17, 1, 0);
             this.tableLayoutPanel13.Controls.Add(this.btnPreprocessingParagraph, 1, 1);
+            this.tableLayoutPanel13.Controls.Add(this.btnShowRealImage, 0, 0);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel13.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
@@ -1508,15 +1508,6 @@
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel13.Size = new System.Drawing.Size(1306, 303);
             this.tableLayoutPanel13.TabIndex = 0;
-            // 
-            // listViewRealImageParagraph
-            // 
-            this.listViewRealImageParagraph.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewRealImageParagraph.Location = new System.Drawing.Point(3, 3);
-            this.listViewRealImageParagraph.Name = "listViewRealImageParagraph";
-            this.listViewRealImageParagraph.Size = new System.Drawing.Size(258, 244);
-            this.listViewRealImageParagraph.TabIndex = 0;
-            this.listViewRealImageParagraph.UseCompatibleStateImageBehavior = false;
             // 
             // btnOpenImageParagraph
             // 
@@ -1536,14 +1527,14 @@
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel17.Controls.Add(this.listViewBinerisasiParagraph, 3, 0);
-            this.tableLayoutPanel17.Controls.Add(this.listViewGaussianFilteringParagraph, 2, 0);
-            this.tableLayoutPanel17.Controls.Add(this.listViewGrayscallingParagraph, 1, 0);
+            this.tableLayoutPanel17.Controls.Add(this.btnShowImageBinary, 3, 0);
+            this.tableLayoutPanel17.Controls.Add(this.btnShowImageGaussianFiltering, 2, 0);
             this.tableLayoutPanel17.Controls.Add(this.label32, 0, 1);
             this.tableLayoutPanel17.Controls.Add(this.label33, 0, 1);
             this.tableLayoutPanel17.Controls.Add(this.label34, 1, 1);
             this.tableLayoutPanel17.Controls.Add(this.label35, 2, 1);
             this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel20, 0, 0);
+            this.tableLayoutPanel17.Controls.Add(this.btnShowImageGrayscalling, 1, 0);
             this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel17.Location = new System.Drawing.Point(267, 3);
             this.tableLayoutPanel17.Name = "tableLayoutPanel17";
@@ -1553,32 +1544,29 @@
             this.tableLayoutPanel17.Size = new System.Drawing.Size(1036, 244);
             this.tableLayoutPanel17.TabIndex = 5;
             // 
-            // listViewBinerisasiParagraph
+            // btnShowImageBinary
             // 
-            this.listViewBinerisasiParagraph.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewBinerisasiParagraph.Location = new System.Drawing.Point(780, 3);
-            this.listViewBinerisasiParagraph.Name = "listViewBinerisasiParagraph";
-            this.listViewBinerisasiParagraph.Size = new System.Drawing.Size(253, 194);
-            this.listViewBinerisasiParagraph.TabIndex = 7;
-            this.listViewBinerisasiParagraph.UseCompatibleStateImageBehavior = false;
+            this.btnShowImageBinary.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnShowImageBinary.Enabled = false;
+            this.btnShowImageBinary.Location = new System.Drawing.Point(780, 3);
+            this.btnShowImageBinary.Name = "btnShowImageBinary";
+            this.btnShowImageBinary.Size = new System.Drawing.Size(253, 194);
+            this.btnShowImageBinary.TabIndex = 7;
+            this.btnShowImageBinary.Text = "Tampilkan Gambar";
+            this.btnShowImageBinary.UseVisualStyleBackColor = true;
+            this.btnShowImageBinary.Click += new System.EventHandler(this.btnShowImageBinary_Click);
             // 
-            // listViewGaussianFilteringParagraph
+            // btnShowImageGaussianFiltering
             // 
-            this.listViewGaussianFilteringParagraph.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewGaussianFilteringParagraph.Location = new System.Drawing.Point(521, 3);
-            this.listViewGaussianFilteringParagraph.Name = "listViewGaussianFilteringParagraph";
-            this.listViewGaussianFilteringParagraph.Size = new System.Drawing.Size(253, 194);
-            this.listViewGaussianFilteringParagraph.TabIndex = 6;
-            this.listViewGaussianFilteringParagraph.UseCompatibleStateImageBehavior = false;
-            // 
-            // listViewGrayscallingParagraph
-            // 
-            this.listViewGrayscallingParagraph.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewGrayscallingParagraph.Location = new System.Drawing.Point(262, 3);
-            this.listViewGrayscallingParagraph.Name = "listViewGrayscallingParagraph";
-            this.listViewGrayscallingParagraph.Size = new System.Drawing.Size(253, 194);
-            this.listViewGrayscallingParagraph.TabIndex = 5;
-            this.listViewGrayscallingParagraph.UseCompatibleStateImageBehavior = false;
+            this.btnShowImageGaussianFiltering.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnShowImageGaussianFiltering.Enabled = false;
+            this.btnShowImageGaussianFiltering.Location = new System.Drawing.Point(521, 3);
+            this.btnShowImageGaussianFiltering.Name = "btnShowImageGaussianFiltering";
+            this.btnShowImageGaussianFiltering.Size = new System.Drawing.Size(253, 194);
+            this.btnShowImageGaussianFiltering.TabIndex = 6;
+            this.btnShowImageGaussianFiltering.Text = "Tamplikan Gambar";
+            this.btnShowImageGaussianFiltering.UseVisualStyleBackColor = true;
+            this.btnShowImageGaussianFiltering.Click += new System.EventHandler(this.btnShowImageGaussianFiltering_Click);
             // 
             // label32
             // 
@@ -1684,6 +1672,18 @@
             this.tbLengthGaussianFilterParagraph.Name = "tbLengthGaussianFilterParagraph";
             this.tbLengthGaussianFilterParagraph.Size = new System.Drawing.Size(169, 20);
             this.tbLengthGaussianFilterParagraph.TabIndex = 6;
+            // 
+            // btnShowImageGrayscalling
+            // 
+            this.btnShowImageGrayscalling.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnShowImageGrayscalling.Enabled = false;
+            this.btnShowImageGrayscalling.Location = new System.Drawing.Point(262, 3);
+            this.btnShowImageGrayscalling.Name = "btnShowImageGrayscalling";
+            this.btnShowImageGrayscalling.Size = new System.Drawing.Size(253, 194);
+            this.btnShowImageGrayscalling.TabIndex = 5;
+            this.btnShowImageGrayscalling.Text = "Tampilkan Gambar";
+            this.btnShowImageGrayscalling.UseVisualStyleBackColor = true;
+            this.btnShowImageGrayscalling.Click += new System.EventHandler(this.btnShowImageGrayscalling_Click);
             // 
             // btnPreprocessingParagraph
             // 
@@ -1977,6 +1977,18 @@
             this.bwParagraph.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwParagraph_DoWork);
             this.bwParagraph.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwParagraph_RunWorkerCompleted);
             // 
+            // btnShowRealImage
+            // 
+            this.btnShowRealImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnShowRealImage.Enabled = false;
+            this.btnShowRealImage.Location = new System.Drawing.Point(3, 3);
+            this.btnShowRealImage.Name = "btnShowRealImage";
+            this.btnShowRealImage.Size = new System.Drawing.Size(258, 244);
+            this.btnShowRealImage.TabIndex = 7;
+            this.btnShowRealImage.Text = "Tampilkan Gambar";
+            this.btnShowRealImage.UseVisualStyleBackColor = true;
+            this.btnShowRealImage.Click += new System.EventHandler(this.btnShowRealImage_Click);
+            // 
             // FormHandWriting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2162,12 +2174,8 @@
         private System.Windows.Forms.CheckBox checkDisplayWeight;
         private System.Windows.Forms.TableLayoutPanel tlpPengenalanParagraph;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
-        private System.Windows.Forms.ListView listViewRealImageParagraph;
         private System.Windows.Forms.Button btnOpenImageParagraph;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
-        private System.Windows.Forms.ListView listViewBinerisasiParagraph;
-        private System.Windows.Forms.ListView listViewGaussianFilteringParagraph;
-        private System.Windows.Forms.ListView listViewGrayscallingParagraph;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
@@ -2198,6 +2206,10 @@
         private System.Windows.Forms.ListView listViewParagraph;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
         private System.Windows.Forms.Button btnTestingDataParagraph;
+        private System.Windows.Forms.Button btnShowImageBinary;
+        private System.Windows.Forms.Button btnShowImageGaussianFiltering;
+        private System.Windows.Forms.Button btnShowImageGrayscalling;
+        private System.Windows.Forms.Button btnShowRealImage;
     }
 }
 

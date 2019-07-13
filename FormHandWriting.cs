@@ -420,7 +420,7 @@ namespace handwriting_recognition
             int layerNeuron = Convert.ToInt32(numLayers.Value);
             int outputNeuron = Constants.LENGTH_ARRAYS_BITS;
 
-            backpropagationNeuralNetwork = new BackpropagationNeuralNetwork.BackpropagationNeuralNetwork(inputNeuron, hiddenNeuron, outputNeuron, true);
+            backpropagationNeuralNetwork = new BackpropagationNeuralNetwork.BackpropagationNeuralNetwork(inputNeuron, hiddenNeuron, outputNeuron, false);
             int maxEpochs = Convert.ToInt32(numMaxEpochs.Value);
             double learnRate = Convert.ToDouble(numLearningRate.Value);
             double momentum = Convert.ToDouble(numMomentum.Value);
@@ -538,6 +538,7 @@ namespace handwriting_recognition
                     _dataParagraph.ClassName = "Paragraph";
                     _dataParagraph.FileName = dlg.FileName;
                     btnPreprocessingParagraph.Enabled = true;
+                    btnShowRealImage.Enabled = true;
                 }
             }
         }
@@ -564,10 +565,18 @@ namespace handwriting_recognition
                 switch (_action)
                 {
                     case "preprocessing Paragraph":
-                        btnProfileProjection.Enabled = true;
+                        numHorizontally.Enabled = true;
+                        numVertically.Enabled = true;                     
+                            btnProfileProjection.Enabled = true;
+                        btnShowImageBinary.Enabled = true;
+                        btnShowImageGaussianFiltering.Enabled = true;
+                        btnShowImageGrayscalling.Enabled = true;
                         break;
                     case "Profile Projection Paragraph":
                         btnFeatureExtractionParagraph.Enabled = true;
+                        break;
+                    case "Feature Extraction Paragraph":
+                        btnTestingDataParagraph.Enabled = true;
                         break;
                     case "Feature Extraction":
                         btnFeatureExtractionParagraph.Enabled = true;
@@ -605,9 +614,9 @@ namespace handwriting_recognition
             data.Gaussian = preprocessing.FilterImage;
             data.Binary = preprocessing.RemoveBorderImage;
 
-            var imageListGrayscalling = new ImageList { ImageSize = new Size(1000, 1000) };
-            var imageListGaussian = new ImageList { ImageSize = new Size(1000, 1000) };
-            var imageListBinary = new ImageList { ImageSize = new Size(1000, 1000) };
+            var imageListGrayscalling = new ImageList { ImageSize = new Size(256, 256) };
+            var imageListGaussian = new ImageList { ImageSize = new Size(256, 256) };
+            var imageListBinary = new ImageList { ImageSize = new Size(256, 256) };
 
             imageListGrayscalling.Images.Add(data.ClassName, data.GrayScalling);
             imageListGaussian.Images.Add(data.ClassName, data.Gaussian);
@@ -615,9 +624,6 @@ namespace handwriting_recognition
             var classNames = new List<string>();
             classNames.Add(data.ClassName);
 
-            setImagetoListView(listViewGrayscallingParagraph, imageListGrayscalling, classNames.ToArray());
-            setImagetoListView(listViewGaussianFilteringParagraph, imageListGaussian, classNames.ToArray());
-            setImagetoListView(listViewBinerisasiParagraph, imageListBinary, classNames.ToArray());
             return data;
         }
 
@@ -631,7 +637,7 @@ namespace handwriting_recognition
             var verticallyImage = profileProjection.ResultImageAfterSliceVertically;
             var horizontalImage = profileProjection.ResultImageAfterSliceHorizontally;
 
-            var imageListVertical = new ImageList { ImageSize = new Size(1000,200) };
+            var imageListVertical = new ImageList { ImageSize = new Size(256,256) };
             List<string> classNamesVertically = new List<string>();
             int i = 0;
             foreach(Bitmap v in verticallyImage)
@@ -716,6 +722,38 @@ namespace handwriting_recognition
             }
             setImagetoListView(listViewTestingData, imageListTesting, arrayResults);
             btnTestingData.Enabled = true;
+        }
+
+        private void btnShowImageGrayscalling_Click(object sender, EventArgs e)
+        {
+            var newImage = new Bitmap(_dataParagraph.GrayScalling);
+            var newForm = new ShowImage(newImage);
+
+            newForm.Show();
+        }
+
+        private void btnShowImageGaussianFiltering_Click(object sender, EventArgs e)
+        {
+            var newImage = new Bitmap(_dataParagraph.Gaussian);
+            var newForm = new ShowImage(newImage);
+
+            newForm.Show();
+        }
+
+        private void btnShowImageBinary_Click(object sender, EventArgs e)
+        {
+            var newImage = new Bitmap(_dataParagraph.Binary);
+            var newForm = new ShowImage(newImage);
+
+            newForm.Show();
+        }
+
+        private void btnShowRealImage_Click(object sender, EventArgs e)
+        {
+            var newImage = new Bitmap(_dataParagraph.Raw);
+            var newForm = new ShowImage(newImage);
+
+            newForm.Show();
         }
     }
 }
