@@ -111,12 +111,6 @@ namespace handwriting_recognition
                     inFormListView.Add(listViewBinerisasiTraining);
                     _dataTraining = backgroundPreprocessing(_dataTraining, inFormListView);
                     break;
-                case "testing":
-                    inFormListView.Add(listViewGrayscallingTesting);
-                    inFormListView.Add(listViewGaussianFilteringTesting);
-                    inFormListView.Add(listViewBinerisasiTesting);
-                    _dataTesting = backgroundPreprocessing(_dataTraining, inFormListView);
-                    break;
             }
             return result;
         }
@@ -132,10 +126,6 @@ namespace handwriting_recognition
                     case "training":
                         btnOpenImageTraining.Enabled = true;
                         btnFeatureExtractionTraining.Enabled = true;
-                        break;
-                    case "testing":
-                        btnOpenImageTesting.Enabled = true;
-                        btnFeatureExtractionTesting.Enabled = true;
                         break;
                 }
   
@@ -210,9 +200,6 @@ namespace handwriting_recognition
                 case "training":
                     _dataTraining = backgroundExtractionFeature(_dataTraining, dataFiturTraining);
                     break;
-                case "testing":
-                    _dataTesting = backgroundExtractionFeature(_dataTesting, dataFiturTesting);
-                    break;
             }
             return result;
         }
@@ -227,10 +214,6 @@ namespace handwriting_recognition
                     case "training":
                         btnOpenImageTraining.Enabled = true;
                         tlpBPNN.Enabled = true;
-                        break;
-                    case "testing":
-                        btnOpenImageTesting.Enabled = true;
-                        tlpPengujian.Enabled = true;
                         break;
                 }
             }
@@ -265,13 +248,11 @@ namespace handwriting_recognition
 
         private void numLengthGaussian_ValueChanged(object sender, EventArgs e)
         {
-            tbLengthGaussianFilter.Text = numLengthGaussian.Value.ToString();
             tbLengthGaussianFilterParagraph.Text = numLengthGaussian.Value.ToString();
         }
 
         private void numWeightGaussian_ValueChanged(object sender, EventArgs e)
         {
-            tbWeightGaussianFilter.Text = numWeightGaussian.Value.ToString();
             tbWeightGaussianFilterParagraph.Text = numWeightGaussian.Value.ToString();
         }
 
@@ -282,71 +263,6 @@ namespace handwriting_recognition
         /// <param name="e"></param>
         ///
 
-        /// <summary>
-        /// FORM PENGUJIAN
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        ///
-        private void btnOpenImageTesting_Click(object sender, EventArgs e)
-        {
-            using (var fbd = new FolderBrowserDialog())
-            {
-                DialogResult result = fbd.ShowDialog();
-
-                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
-                {
-                    _dataTesting = new List<ImageDTO>();
-                    // create image list and fill it 
-                    var imageList = new ImageList { ImageSize = new Size(200, 200) };
-                    string[] folders = Directory.GetDirectories(fbd.SelectedPath + "\\");
-                    List<string> classNames = new List<string>();
-                    foreach (string fd in folders)
-                    {
-                        string[] files = Directory.GetFiles(fd);
-                        foreach (string f in files)
-                        {
-                            ImageDTO imageDTO = new ImageDTO();
-                            imageDTO.Raw = new Bitmap(f);
-                            imageDTO.ClassName = Path.GetFileName(fd);
-                            char c = imageDTO.ClassName[0];
-                            imageDTO.PositionOfCharacter = Util.charToIntegerPosition(c);//to get class integer of character (e.g: 'A' is class 0, 'B' is class 1, etc
-                            var binaryArrays = Util.intToArrays(imageDTO.PositionOfCharacter);
-                            imageDTO.ArrayBinaryofClass = binaryArrays;
-                            imageDTO.FileName = Path.GetFileName(f);
-                            imageList.Images.Add(imageDTO.ClassName, new Bitmap(imageDTO.Raw));
-                            classNames.Add(imageDTO.ClassName);
-                            _dataTesting.Add(imageDTO);
-                        }
-                    }
-                    setImagetoListView(listViewRealImageTesting, imageList, classNames.ToArray());
-                    System.Windows.Forms.MessageBox.Show("Data Training found: " + _dataTesting.Count.ToString(), "Message");
-                }
-            }
-            btnPreprocessingTesting.Enabled = true;
-        }
-
-        private void btnPreprocessingTesting_Click(object sender, EventArgs e)
-        {
-            _action = "testing";
-            btnPreprocessingTesting.Enabled = false;
-            btnOpenImageTesting.Enabled = false;
-            bwLoadingPreprocessing.RunWorkerAsync();
-        }
-
-        private void btnFeatureExtractionTesting_Click(object sender, EventArgs e)
-        {
-            _action = "testing";
-            btnOpenImageTesting.Enabled = false;
-            btnFeatureExtractionTesting.Enabled = false;
-            dataFiturTesting.ColumnCount = Constants.COLUMNNAME.Length;
-            for (int i = 0; i < Constants.COLUMNNAME.Length; i++)
-            {
-                dataFiturTesting.Columns[i].Name = Constants.COLUMNNAME[i];
-                dataFiturTesting.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            }
-            bwExtractionFeature.RunWorkerAsync();
-        }
 
         private void btnTraining_Click(object sender, EventArgs e)
         {
@@ -386,10 +302,6 @@ namespace handwriting_recognition
                         numLearningRate.Enabled = true;
                         numMomentum.Enabled = true;
                         numMaxEpochs.Enabled = true;
-                        tlpTesting.Enabled = true;
-                        break;
-                    case "testing BPNN":
-                        btnTestingData.Enabled = true;
                         tlpPengenalanParagraph.Enabled = true;
                         break;
                 }
@@ -403,9 +315,6 @@ namespace handwriting_recognition
             {
                 case "training BPNN":
                     backgroundBPNNTraining(_dataTraining);
-                    break;
-                case "testing BPNN":
-                    backgroundBPNNTestingEachCharacter(_dataTesting);
                     break;
             }
             return result;
@@ -473,48 +382,6 @@ namespace handwriting_recognition
             }
         }
 
-        private void backgroundBPNNTestingEachCharacter(List<ImageDTO> data)
-        {
-            Console.WriteLine("Prepearing Load data from Memory");
-            List<double[]> dataTesting = new List<double[]>();
-            int inputNeuron = data[0].MomentHu.Length;
-            for (int i = 0; i < data.Count; i++)
-            {
-                double[] dataRows = new double[inputNeuron + Constants.LENGTH_ARRAYS_BITS];
-                for (int j = 0; j < data[i].MomentHu.Length; j++)
-                {
-                    dataRows[j] = data[i].MomentHu[j];
-                }
-                int k = 0;
-                for (int j = data[i].MomentHu.Length; j < dataRows.Length; j++)
-                {
-                    dataRows[j] = data[i].ArrayBinaryofClass[k];
-                    k++;
-                }
-                dataTesting.Add(dataRows);
-            }
-            double accuracy = backpropagationNeuralNetwork.Accuracy(dataTesting.ToArray());
-            Console.WriteLine("=========================================================");
-            Console.WriteLine(accuracy);
-
-            var result = backpropagationNeuralNetwork.ResultTesting;
-            var imageListTesting = new ImageList { ImageSize = new Size(200, 200) };
-            string[] arrayResults = new string[result.Length];
-            for (int i = 0; i < result.Length; i++)
-            {
-                ImageDTO imageDTO = data[i];
-                imageListTesting.Images.Add(imageDTO.ClassName, imageDTO.GrayScalling);
-                arrayResults[i] = "Real "+imageDTO.ClassName+", predicate = "+Util.integerToChar(result[i]);
-            }
-            setImagetoListView(listViewTestingData, imageListTesting, arrayResults);
-        }
-
-        private void btnTestingData_Click(object sender, EventArgs e)
-        {
-            _action = "testing BPNN";
-            btnTestingData.Enabled = false;
-            bwBPNN.RunWorkerAsync();
-        }
     /// <summary>
     ///  Testing Paragraph
     /// </summary>
@@ -575,6 +442,8 @@ namespace handwriting_recognition
                         break;
                     case "Feature Extraction Paragraph":
                         btnTestingDataParagraph.Enabled = true;
+                        tlpParagraph.Enabled = true;
+                        tlpPengenalanParagraph.Enabled = true;
                         break;
                     case "Feature Extraction":
                         btnFeatureExtractionParagraph.Enabled = true;
@@ -692,14 +561,13 @@ namespace handwriting_recognition
 
         private void btnTestingDataParagraph_Click(object sender, EventArgs e)
         {
-            btnTestingData.Enabled = false;
             var data = _sliceOfParagraph;
             Console.WriteLine("Prepearing Load data from Memory");
             List<int> predicates = new List<int>();
             int inputNeuron = data[0].MomentHu.Length;
             for (int i = 0; i < data.Count; i++)
             {
-                double[] dataRows = new double[inputNeuron + Constants.LENGTH_ARRAYS_BITS];
+                double[] dataRows = new double[inputNeuron];
                 for (int j = 0; j < data[i].MomentHu.Length; j++)
                 {
                     dataRows[j] = data[i].MomentHu[j];
@@ -709,17 +577,16 @@ namespace handwriting_recognition
                 predicates.Add(predicate);
             }
 
-            var result = backpropagationNeuralNetwork.ResultTesting;
             var imageListTesting = new ImageList { ImageSize = new Size(200, 200) };
-            string[] arrayResults = new string[result.Length];
-            for (int i = 0; i < result.Length; i++)
+            string[] arrayResults = new string[predicates.Count];
+            for (int i = 0; i < predicates.Count; i++)
             {
                 ImageDTO imageDTO = data[i];
-                imageListTesting.Images.Add(imageDTO.ClassName, imageDTO.GrayScalling);
+                imageListTesting.Images.Add(imageDTO.ClassName, imageDTO.Binary);
                 arrayResults[i] = "index "+ imageDTO.ClassName + ", predicate = " + Util.integerToChar(predicates[i]);
             }
-            setImagetoListView(listViewTestingData, imageListTesting, arrayResults);
-            btnTestingData.Enabled = true;
+            setImagetoListView(listViewParagraph, imageListTesting, arrayResults);
+            btnTestingDataParagraph.Enabled = true;
         }
 
         private void btnShowImageGrayscalling_Click(object sender, EventArgs e)
