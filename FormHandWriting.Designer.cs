@@ -137,6 +137,7 @@
             this.tbLengthGaussianFilterParagraph = new System.Windows.Forms.TextBox();
             this.btnShowImageGrayscalling = new System.Windows.Forms.Button();
             this.btnPreprocessingParagraph = new System.Windows.Forms.Button();
+            this.btnShowRealImage = new System.Windows.Forms.Button();
             this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
             this.btnFeatureExtractionParagraph = new System.Windows.Forms.Button();
             this.btnProfileProjection = new System.Windows.Forms.Button();
@@ -165,7 +166,6 @@
             this.bwExtractionFeature = new System.ComponentModel.BackgroundWorker();
             this.bwBPNN = new System.ComponentModel.BackgroundWorker();
             this.bwParagraph = new System.ComponentModel.BackgroundWorker();
-            this.btnShowRealImage = new System.Windows.Forms.Button();
             this.tabBase.SuspendLayout();
             this.tabHome.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -1697,6 +1697,18 @@
             this.btnPreprocessingParagraph.UseVisualStyleBackColor = true;
             this.btnPreprocessingParagraph.Click += new System.EventHandler(this.btnPreprocessingParagraph_Click);
             // 
+            // btnShowRealImage
+            // 
+            this.btnShowRealImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnShowRealImage.Enabled = false;
+            this.btnShowRealImage.Location = new System.Drawing.Point(3, 3);
+            this.btnShowRealImage.Name = "btnShowRealImage";
+            this.btnShowRealImage.Size = new System.Drawing.Size(258, 244);
+            this.btnShowRealImage.TabIndex = 7;
+            this.btnShowRealImage.Text = "Tampilkan Gambar";
+            this.btnShowRealImage.UseVisualStyleBackColor = true;
+            this.btnShowRealImage.Click += new System.EventHandler(this.btnShowRealImage_Click);
+            // 
             // tableLayoutPanel22
             // 
             this.tableLayoutPanel22.ColumnCount = 2;
@@ -1976,18 +1988,6 @@
             // 
             this.bwParagraph.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwParagraph_DoWork);
             this.bwParagraph.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwParagraph_RunWorkerCompleted);
-            // 
-            // btnShowRealImage
-            // 
-            this.btnShowRealImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnShowRealImage.Enabled = false;
-            this.btnShowRealImage.Location = new System.Drawing.Point(3, 3);
-            this.btnShowRealImage.Name = "btnShowRealImage";
-            this.btnShowRealImage.Size = new System.Drawing.Size(258, 244);
-            this.btnShowRealImage.TabIndex = 7;
-            this.btnShowRealImage.Text = "Tampilkan Gambar";
-            this.btnShowRealImage.UseVisualStyleBackColor = true;
-            this.btnShowRealImage.Click += new System.EventHandler(this.btnShowRealImage_Click);
             // 
             // FormHandWriting
             // 

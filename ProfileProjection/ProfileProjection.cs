@@ -12,7 +12,6 @@ namespace ProfileProjection
         private Bitmap _input;
         private Bitmap[] _resultImageAfterSliceVetically;
         private List<Bitmap> _resultImageAfterSliceHorizontally;
-        private ResizeImage resizeImage;
         public ProfileProjection(Bitmap input, int thresholdVerticalByPercentage, int thresholdHorizontalByPercentage)
         {
             _input = input;
@@ -25,11 +24,6 @@ namespace ProfileProjection
                 int thresholdHorizontal = (thresholdHorizontalByPercentage / 100) * image.Height;
                 var horizontalProjection = new Horizontal(image, thresholdHorizontal);
                 var horizontalProjectionImage = horizontalProjection.Output;
-                for(int i = 0; i < horizontalProjectionImage.Length; i++)
-                {
-                    resizeImage = new ResizeImage(horizontalProjectionImage[i], 200, 200);//resize image to 200x200 fix
-                    horizontalProjectionImage[i] = resizeImage.Output;
-                }
                 _resultImageAfterSliceHorizontally.AddRange(horizontalProjection.Output);
             }
         }

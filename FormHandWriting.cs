@@ -25,7 +25,6 @@ namespace handwriting_recognition
         private string _action;
         private Preprocessing.Preprocessing preprocessing;
         private ProfileProjection.ProfileProjection profileProjection;
-        private ResizeImage resizeImage;
         private BackpropagationNeuralNetwork.BackpropagationNeuralNetwork backpropagationNeuralNetwork;
 
         public FormHandWriting()
@@ -156,8 +155,7 @@ namespace handwriting_recognition
                  preprocessing = new Preprocessing.Preprocessing(imageDTO.Raw, lengthGaussianFilter, weightGaussianFilter);
                  imageDTO.GrayScalling = preprocessing.GrayscalingImage;
                  imageDTO.Gaussian = preprocessing.FilterImage;
-                 resizeImage = new ResizeImage(preprocessing.RemoveBorderImage, Constants.FIX_WIDTH, Constants.FIX_HEIGHT);
-                 imageDTO.Binary = resizeImage.Output;
+                 imageDTO.Binary = preprocessing.RemoveBorderImage;
 
                  imageDTOs[i] = imageDTO;
              });
