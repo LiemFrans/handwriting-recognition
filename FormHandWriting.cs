@@ -52,10 +52,22 @@ namespace handwriting_recognition
                 
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                 {
+
                     _dataTraining = new List<ImageDTO>();
                     // create image list and fill it 
                     var imageList = new ImageList { ImageSize = new Size(200, 200) };
                     string[] folders = Directory.GetDirectories(fbd.SelectedPath+"\\");
+                    HashSet<char> classEachCharacters = new HashSet<char>();
+                    foreach (string fd in folders)
+                    {
+                        string[] files = Directory.GetFiles(fd);
+                        if (files.Length > 0)
+                        {
+                            classEachCharacters.Add(Path.GetFileName(fd)[0]);
+                        }
+                    }
+                    Constants.ALPHA = classEachCharacters.ToArray();
+                    Constants.LENGTH_ARRAYS_BITS = Constants.ALPHA.Length;
                     List<string> classNames = new List<string>();
                     foreach (string fd in folders)
                     {
