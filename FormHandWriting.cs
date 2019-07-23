@@ -25,6 +25,8 @@ namespace handwriting_recognition
         private string _action;
         private Preprocessing.Preprocessing preprocessing;
         private ProfileProjection.ProfileProjection profileProjection;
+        private Bitmap[] _verticallyImage;
+        private Bitmap[] _horizontalImage;
         private BackpropagationNeuralNetwork.BackpropagationNeuralNetwork backpropagationNeuralNetwork;
 
         public FormHandWriting()
@@ -501,13 +503,13 @@ namespace handwriting_recognition
             Bitmap bitmap = data.Binary;
             profileProjection = new ProfileProjection.ProfileProjection(bitmap, vertical, horizontal);
 
-            var verticallyImage = profileProjection.ResultImageAfterSliceVertically;
-            var horizontalImage = profileProjection.ResultImageAfterSliceHorizontally;
+            _verticallyImage = profileProjection.ResultImageAfterSliceVertically;
+            _horizontalImage = profileProjection.ResultImageAfterSliceHorizontally;
 
             var imageListVertical = new ImageList { ImageSize = new Size(256,256) };
             List<string> classNamesVertically = new List<string>();
             int i = 0;
-            foreach(Bitmap v in verticallyImage)
+            foreach(Bitmap v in _verticallyImage)
             {
                 imageListVertical.Images.Add(v);
                 classNamesVertically.Add(i.ToString());
@@ -520,7 +522,7 @@ namespace handwriting_recognition
             List<string> classNamesHorizontally = new List<string>();
             i = 0;
 
-            foreach (Bitmap h in horizontalImage)
+            foreach (Bitmap h in _horizontalImage)
             {
                 imageListHorizontal.Images.Add(h);
                 ImageDTO imageDTO = new ImageDTO();
@@ -616,6 +618,28 @@ namespace handwriting_recognition
         private void btnShowRealImage_Click(object sender, EventArgs e)
         {
             var newImage = new Bitmap(_dataParagraph.Raw);
+            var newForm = new ShowImage(newImage);
+
+            newForm.Show();
+        }
+
+        private void listViewVertically_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listViewVertically.SelectedItems.Count == 0)
+                return;
+            int indexImage = Convert.ToInt32(listViewVertically.SelectedItems[0].Text);
+            var newImage = _verticallyImage[indexImage];
+            var newForm = new ShowImage(newImage);
+
+            newForm.Show();
+        }
+
+        private void listViewHorizontally_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listViewHorizontally.SelectedItems.Count == 0)
+                return;
+            int indexImage = Convert.ToInt32(listViewHorizontally.SelectedItems[0].Text);
+            var newImage = _horizontalImage[indexImage];
             var newForm = new ShowImage(newImage);
 
             newForm.Show();

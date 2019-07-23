@@ -56,7 +56,7 @@ namespace BackpropagationNeuralNetwork
                 (_numHiddenNeuron * _numOutputNeuron) + _numHiddenNeuron + _numOutputNeuron;
             Layers initialWeights = new Layers(numWeights,nameof(initialWeights));
             for (int i = 0; i < initialWeights.NumNeuron; ++i)
-                initialWeights.Neurons[i].Value = (0.001 - 0.0001) * _rng.NextDouble() + 0.0001;
+                initialWeights.Neurons[i].Value = (1 - 0) * _rng.NextDouble() + 0;
             SetWeights(initialWeights);
         }
 

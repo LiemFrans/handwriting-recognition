@@ -40,148 +40,148 @@
             this.bwParagraph = new System.ComponentModel.BackgroundWorker();
             this.tabTestingDataParagraph = new System.Windows.Forms.TabPage();
             this.tlpParagraph = new System.Windows.Forms.TableLayoutPanel();
+            this.listViewParagraph = new System.Windows.Forms.ListView();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.btnTestingDataParagraph = new System.Windows.Forms.Button();
-            this.listViewParagraph = new System.Windows.Forms.ListView();
             this.tabTesting = new System.Windows.Forms.TabPage();
             this.tlpPengenalanParagraph = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataFiturParagraf = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
-            this.numHorizontally = new System.Windows.Forms.NumericUpDown();
-            this.label39 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
-            this.numVertically = new System.Windows.Forms.NumericUpDown();
-            this.label38 = new System.Windows.Forms.Label();
-            this.listViewVertically = new System.Windows.Forms.ListView();
-            this.listViewHorizontally = new System.Windows.Forms.ListView();
-            this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnProfileProjection = new System.Windows.Forms.Button();
-            this.btnFeatureExtractionParagraph = new System.Windows.Forms.Button();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnShowRealImage = new System.Windows.Forms.Button();
-            this.btnPreprocessingParagraph = new System.Windows.Forms.Button();
-            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnShowImageGrayscalling = new System.Windows.Forms.Button();
-            this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
-            this.tbLengthGaussianFilterParagraph = new System.Windows.Forms.TextBox();
-            this.tbWeightGaussianFilterParagraph = new System.Windows.Forms.TextBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.btnShowImageGaussianFiltering = new System.Windows.Forms.Button();
-            this.btnShowImageBinary = new System.Windows.Forms.Button();
             this.btnOpenImageParagraph = new System.Windows.Forms.Button();
+            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnShowImageBinary = new System.Windows.Forms.Button();
+            this.btnShowImageGaussianFiltering = new System.Windows.Forms.Button();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.tbWeightGaussianFilterParagraph = new System.Windows.Forms.TextBox();
+            this.tbLengthGaussianFilterParagraph = new System.Windows.Forms.TextBox();
+            this.btnShowImageGrayscalling = new System.Windows.Forms.Button();
+            this.btnPreprocessingParagraph = new System.Windows.Forms.Button();
+            this.btnShowRealImage = new System.Windows.Forms.Button();
+            this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnFeatureExtractionParagraph = new System.Windows.Forms.Button();
+            this.btnProfileProjection = new System.Windows.Forms.Button();
+            this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
+            this.listViewHorizontally = new System.Windows.Forms.ListView();
+            this.listViewVertically = new System.Windows.Forms.ListView();
+            this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
+            this.label38 = new System.Windows.Forms.Label();
+            this.numVertically = new System.Windows.Forms.NumericUpDown();
+            this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
+            this.label39 = new System.Windows.Forms.Label();
+            this.numHorizontally = new System.Windows.Forms.NumericUpDown();
+            this.dataFiturParagraf = new System.Windows.Forms.DataGridView();
             this.tabDataTrainingBPNN = new System.Windows.Forms.TabPage();
             this.tlpBPNN = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
-            this.checkDisplayWeight = new System.Windows.Forms.CheckBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.dgViewWeightResult = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
-            this.numMomentum = new System.Windows.Forms.NumericUpDown();
-            this.label31 = new System.Windows.Forms.Label();
-            this.btnTraining = new System.Windows.Forms.Button();
-            this.numLayers = new System.Windows.Forms.NumericUpDown();
-            this.label27 = new System.Windows.Forms.Label();
-            this.numHiddenNeuron = new System.Windows.Forms.NumericUpDown();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.numMaxEpochs = new System.Windows.Forms.NumericUpDown();
-            this.label30 = new System.Windows.Forms.Label();
             this.numLearningRate = new System.Windows.Forms.NumericUpDown();
+            this.label30 = new System.Windows.Forms.Label();
+            this.numMaxEpochs = new System.Windows.Forms.NumericUpDown();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.numHiddenNeuron = new System.Windows.Forms.NumericUpDown();
+            this.label27 = new System.Windows.Forms.Label();
+            this.numLayers = new System.Windows.Forms.NumericUpDown();
+            this.btnTraining = new System.Windows.Forms.Button();
+            this.label31 = new System.Windows.Forms.Label();
+            this.numMomentum = new System.Windows.Forms.NumericUpDown();
+            this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
+            this.dgViewWeightResult = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
+            this.label28 = new System.Windows.Forms.Label();
+            this.checkDisplayWeight = new System.Windows.Forms.CheckBox();
             this.tabDataTraining = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataFiturTraining = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.listViewRealImageTraining = new System.Windows.Forms.ListView();
+            this.btnOpenImageTraining = new System.Windows.Forms.Button();
+            this.tableLayoutPanel29 = new System.Windows.Forms.TableLayoutPanel();
+            this.listViewBinerisasiTraining = new System.Windows.Forms.ListView();
+            this.listViewGaussianFilteringTraining = new System.Windows.Forms.ListView();
+            this.listViewGrayscallingTraining = new System.Windows.Forms.ListView();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel30 = new System.Windows.Forms.TableLayoutPanel();
+            this.numLengthGaussian = new System.Windows.Forms.NumericUpDown();
+            this.numWeightGaussian = new System.Windows.Forms.NumericUpDown();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.btnPreprocessingTraining = new System.Windows.Forms.Button();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.btnFeatureExtractionTraining = new System.Windows.Forms.Button();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnPreprocessingTraining = new System.Windows.Forms.Button();
-            this.tableLayoutPanel29 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel30 = new System.Windows.Forms.TableLayoutPanel();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.numWeightGaussian = new System.Windows.Forms.NumericUpDown();
-            this.numLengthGaussian = new System.Windows.Forms.NumericUpDown();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.listViewGrayscallingTraining = new System.Windows.Forms.ListView();
-            this.listViewGaussianFilteringTraining = new System.Windows.Forms.ListView();
-            this.listViewBinerisasiTraining = new System.Windows.Forms.ListView();
-            this.btnOpenImageTraining = new System.Windows.Forms.Button();
-            this.listViewRealImageTraining = new System.Windows.Forms.ListView();
+            this.dataFiturTraining = new System.Windows.Forms.DataGridView();
             this.tabHome = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.pbMikroskil = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbTitle = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lbTitle = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pbMikroskil = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.tabBase = new System.Windows.Forms.TabControl();
             this.tabTestingDataParagraph.SuspendLayout();
             this.tlpParagraph.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
             this.tabTesting.SuspendLayout();
             this.tlpPengenalanParagraph.SuspendLayout();
-            this.tableLayoutPanel23.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataFiturParagraf)).BeginInit();
-            this.tableLayoutPanel24.SuspendLayout();
-            this.tableLayoutPanel26.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numHorizontally)).BeginInit();
-            this.tableLayoutPanel25.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numVertically)).BeginInit();
-            this.tableLayoutPanel22.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
+            this.tableLayoutPanel22.SuspendLayout();
+            this.tableLayoutPanel23.SuspendLayout();
+            this.tableLayoutPanel24.SuspendLayout();
+            this.tableLayoutPanel25.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numVertically)).BeginInit();
+            this.tableLayoutPanel26.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numHorizontally)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataFiturParagraf)).BeginInit();
             this.tabDataTrainingBPNN.SuspendLayout();
             this.tlpBPNN.SuspendLayout();
-            this.tableLayoutPanel21.SuspendLayout();
-            this.tableLayoutPanel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgViewWeightResult)).BeginInit();
             this.tableLayoutPanel19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numMomentum)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numLayers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numHiddenNeuron)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numMaxEpochs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLearningRate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMaxEpochs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numHiddenNeuron)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numLayers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMomentum)).BeginInit();
+            this.tableLayoutPanel21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgViewWeightResult)).BeginInit();
+            this.tableLayoutPanel16.SuspendLayout();
             this.tabDataTraining.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataFiturTraining)).BeginInit();
-            this.tableLayoutPanel12.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel29.SuspendLayout();
             this.tableLayoutPanel30.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numWeightGaussian)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLengthGaussian)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numWeightGaussian)).BeginInit();
+            this.tableLayoutPanel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataFiturTraining)).BeginInit();
             this.tabHome.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMikroskil)).BeginInit();
+            this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMikroskil)).BeginInit();
+            this.tableLayoutPanel5.SuspendLayout();
             this.tabBase.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -261,6 +261,15 @@
             this.tlpParagraph.Size = new System.Drawing.Size(1312, 670);
             this.tlpParagraph.TabIndex = 1;
             // 
+            // listViewParagraph
+            // 
+            this.listViewParagraph.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewParagraph.Location = new System.Drawing.Point(3, 45);
+            this.listViewParagraph.Name = "listViewParagraph";
+            this.listViewParagraph.Size = new System.Drawing.Size(1306, 622);
+            this.listViewParagraph.TabIndex = 0;
+            this.listViewParagraph.UseCompatibleStateImageBehavior = false;
+            // 
             // tableLayoutPanel15
             // 
             this.tableLayoutPanel15.ColumnCount = 2;
@@ -285,15 +294,6 @@
             this.btnTestingDataParagraph.Text = "Testing Data";
             this.btnTestingDataParagraph.UseVisualStyleBackColor = true;
             this.btnTestingDataParagraph.Click += new System.EventHandler(this.btnTestingDataParagraph_Click);
-            // 
-            // listViewParagraph
-            // 
-            this.listViewParagraph.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewParagraph.Location = new System.Drawing.Point(3, 45);
-            this.listViewParagraph.Name = "listViewParagraph";
-            this.listViewParagraph.Size = new System.Drawing.Size(1306, 622);
-            this.listViewParagraph.TabIndex = 0;
-            this.listViewParagraph.UseCompatibleStateImageBehavior = false;
             // 
             // tabTesting
             // 
@@ -324,176 +324,6 @@
             this.tlpPengenalanParagraph.Size = new System.Drawing.Size(1312, 670);
             this.tlpPengenalanParagraph.TabIndex = 1;
             // 
-            // tableLayoutPanel23
-            // 
-            this.tableLayoutPanel23.ColumnCount = 2;
-            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel23.Controls.Add(this.tableLayoutPanel24, 0, 0);
-            this.tableLayoutPanel23.Controls.Add(this.dataFiturParagraf, 1, 0);
-            this.tableLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel23.Location = new System.Drawing.Point(3, 312);
-            this.tableLayoutPanel23.Name = "tableLayoutPanel23";
-            this.tableLayoutPanel23.RowCount = 1;
-            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.56106F));
-            this.tableLayoutPanel23.Size = new System.Drawing.Size(1306, 303);
-            this.tableLayoutPanel23.TabIndex = 4;
-            // 
-            // dataFiturParagraf
-            // 
-            this.dataFiturParagraf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataFiturParagraf.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataFiturParagraf.Location = new System.Drawing.Point(656, 3);
-            this.dataFiturParagraf.Name = "dataFiturParagraf";
-            this.dataFiturParagraf.Size = new System.Drawing.Size(647, 297);
-            this.dataFiturParagraf.TabIndex = 1;
-            // 
-            // tableLayoutPanel24
-            // 
-            this.tableLayoutPanel24.ColumnCount = 2;
-            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel24.Controls.Add(this.listViewHorizontally, 1, 1);
-            this.tableLayoutPanel24.Controls.Add(this.listViewVertically, 0, 1);
-            this.tableLayoutPanel24.Controls.Add(this.tableLayoutPanel25, 0, 0);
-            this.tableLayoutPanel24.Controls.Add(this.tableLayoutPanel26, 1, 0);
-            this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel24.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel24.Name = "tableLayoutPanel24";
-            this.tableLayoutPanel24.RowCount = 2;
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.10101F));
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.89899F));
-            this.tableLayoutPanel24.Size = new System.Drawing.Size(647, 297);
-            this.tableLayoutPanel24.TabIndex = 0;
-            // 
-            // tableLayoutPanel26
-            // 
-            this.tableLayoutPanel26.ColumnCount = 2;
-            this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel26.Controls.Add(this.label39, 0, 0);
-            this.tableLayoutPanel26.Controls.Add(this.numHorizontally, 1, 0);
-            this.tableLayoutPanel26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel26.Location = new System.Drawing.Point(326, 3);
-            this.tableLayoutPanel26.Name = "tableLayoutPanel26";
-            this.tableLayoutPanel26.RowCount = 1;
-            this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel26.Size = new System.Drawing.Size(318, 24);
-            this.tableLayoutPanel26.TabIndex = 5;
-            // 
-            // numHorizontally
-            // 
-            this.numHorizontally.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numHorizontally.Enabled = false;
-            this.numHorizontally.Location = new System.Drawing.Point(162, 3);
-            this.numHorizontally.Name = "numHorizontally";
-            this.numHorizontally.Size = new System.Drawing.Size(153, 20);
-            this.numHorizontally.TabIndex = 1;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label39.Location = new System.Drawing.Point(3, 0);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(153, 24);
-            this.label39.TabIndex = 0;
-            this.label39.Text = "Threshold Horizontally (%)";
-            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tableLayoutPanel25
-            // 
-            this.tableLayoutPanel25.ColumnCount = 2;
-            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel25.Controls.Add(this.label38, 0, 0);
-            this.tableLayoutPanel25.Controls.Add(this.numVertically, 1, 0);
-            this.tableLayoutPanel25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel25.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel25.Name = "tableLayoutPanel25";
-            this.tableLayoutPanel25.RowCount = 1;
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tableLayoutPanel25.Size = new System.Drawing.Size(317, 24);
-            this.tableLayoutPanel25.TabIndex = 4;
-            // 
-            // numVertically
-            // 
-            this.numVertically.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numVertically.Enabled = false;
-            this.numVertically.Location = new System.Drawing.Point(161, 3);
-            this.numVertically.Name = "numVertically";
-            this.numVertically.Size = new System.Drawing.Size(153, 20);
-            this.numVertically.TabIndex = 1;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label38.Location = new System.Drawing.Point(3, 0);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(152, 24);
-            this.label38.TabIndex = 0;
-            this.label38.Text = "Threshold Vertically (%)";
-            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // listViewVertically
-            // 
-            this.listViewVertically.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewVertically.Location = new System.Drawing.Point(3, 33);
-            this.listViewVertically.Name = "listViewVertically";
-            this.listViewVertically.Size = new System.Drawing.Size(317, 261);
-            this.listViewVertically.TabIndex = 0;
-            this.listViewVertically.UseCompatibleStateImageBehavior = false;
-            // 
-            // listViewHorizontally
-            // 
-            this.listViewHorizontally.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewHorizontally.Location = new System.Drawing.Point(326, 33);
-            this.listViewHorizontally.Name = "listViewHorizontally";
-            this.listViewHorizontally.Size = new System.Drawing.Size(318, 261);
-            this.listViewHorizontally.TabIndex = 3;
-            this.listViewHorizontally.UseCompatibleStateImageBehavior = false;
-            // 
-            // tableLayoutPanel22
-            // 
-            this.tableLayoutPanel22.ColumnCount = 2;
-            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel22.Controls.Add(this.btnFeatureExtractionParagraph, 1, 0);
-            this.tableLayoutPanel22.Controls.Add(this.btnProfileProjection, 0, 0);
-            this.tableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel22.Location = new System.Drawing.Point(3, 621);
-            this.tableLayoutPanel22.Name = "tableLayoutPanel22";
-            this.tableLayoutPanel22.RowCount = 1;
-            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel22.Size = new System.Drawing.Size(1306, 46);
-            this.tableLayoutPanel22.TabIndex = 3;
-            // 
-            // btnProfileProjection
-            // 
-            this.btnProfileProjection.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnProfileProjection.Enabled = false;
-            this.btnProfileProjection.Location = new System.Drawing.Point(3, 3);
-            this.btnProfileProjection.Name = "btnProfileProjection";
-            this.btnProfileProjection.Size = new System.Drawing.Size(647, 40);
-            this.btnProfileProjection.TabIndex = 3;
-            this.btnProfileProjection.Text = "Profile Projection";
-            this.btnProfileProjection.UseVisualStyleBackColor = true;
-            this.btnProfileProjection.Click += new System.EventHandler(this.btnProfileProjection_Click);
-            // 
-            // btnFeatureExtractionParagraph
-            // 
-            this.btnFeatureExtractionParagraph.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnFeatureExtractionParagraph.Enabled = false;
-            this.btnFeatureExtractionParagraph.Location = new System.Drawing.Point(656, 3);
-            this.btnFeatureExtractionParagraph.Name = "btnFeatureExtractionParagraph";
-            this.btnFeatureExtractionParagraph.Size = new System.Drawing.Size(647, 40);
-            this.btnFeatureExtractionParagraph.TabIndex = 2;
-            this.btnFeatureExtractionParagraph.Text = "Extraksi Ciri";
-            this.btnFeatureExtractionParagraph.UseVisualStyleBackColor = true;
-            this.btnFeatureExtractionParagraph.Click += new System.EventHandler(this.btnFeatureExtractionParagraph_Click);
-            // 
             // tableLayoutPanel13
             // 
             this.tableLayoutPanel13.ColumnCount = 2;
@@ -513,29 +343,16 @@
             this.tableLayoutPanel13.Size = new System.Drawing.Size(1306, 303);
             this.tableLayoutPanel13.TabIndex = 0;
             // 
-            // btnShowRealImage
+            // btnOpenImageParagraph
             // 
-            this.btnShowRealImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnShowRealImage.Enabled = false;
-            this.btnShowRealImage.Location = new System.Drawing.Point(3, 3);
-            this.btnShowRealImage.Name = "btnShowRealImage";
-            this.btnShowRealImage.Size = new System.Drawing.Size(258, 244);
-            this.btnShowRealImage.TabIndex = 7;
-            this.btnShowRealImage.Text = "Tampilkan Gambar";
-            this.btnShowRealImage.UseVisualStyleBackColor = true;
-            this.btnShowRealImage.Click += new System.EventHandler(this.btnShowRealImage_Click);
-            // 
-            // btnPreprocessingParagraph
-            // 
-            this.btnPreprocessingParagraph.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPreprocessingParagraph.Enabled = false;
-            this.btnPreprocessingParagraph.Location = new System.Drawing.Point(267, 253);
-            this.btnPreprocessingParagraph.Name = "btnPreprocessingParagraph";
-            this.btnPreprocessingParagraph.Size = new System.Drawing.Size(1036, 47);
-            this.btnPreprocessingParagraph.TabIndex = 6;
-            this.btnPreprocessingParagraph.Text = "Preprocessing Paragraph";
-            this.btnPreprocessingParagraph.UseVisualStyleBackColor = true;
-            this.btnPreprocessingParagraph.Click += new System.EventHandler(this.btnPreprocessingParagraph_Click);
+            this.btnOpenImageParagraph.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnOpenImageParagraph.Location = new System.Drawing.Point(3, 253);
+            this.btnOpenImageParagraph.Name = "btnOpenImageParagraph";
+            this.btnOpenImageParagraph.Size = new System.Drawing.Size(258, 47);
+            this.btnOpenImageParagraph.TabIndex = 4;
+            this.btnOpenImageParagraph.Text = "Open Image Paragraph";
+            this.btnOpenImageParagraph.UseVisualStyleBackColor = true;
+            this.btnOpenImageParagraph.Click += new System.EventHandler(this.btnOpenImageParagraph_Click);
             // 
             // tableLayoutPanel17
             // 
@@ -561,17 +378,73 @@
             this.tableLayoutPanel17.Size = new System.Drawing.Size(1036, 244);
             this.tableLayoutPanel17.TabIndex = 5;
             // 
-            // btnShowImageGrayscalling
+            // btnShowImageBinary
             // 
-            this.btnShowImageGrayscalling.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnShowImageGrayscalling.Enabled = false;
-            this.btnShowImageGrayscalling.Location = new System.Drawing.Point(262, 3);
-            this.btnShowImageGrayscalling.Name = "btnShowImageGrayscalling";
-            this.btnShowImageGrayscalling.Size = new System.Drawing.Size(253, 194);
-            this.btnShowImageGrayscalling.TabIndex = 5;
-            this.btnShowImageGrayscalling.Text = "Tampilkan Gambar";
-            this.btnShowImageGrayscalling.UseVisualStyleBackColor = true;
-            this.btnShowImageGrayscalling.Click += new System.EventHandler(this.btnShowImageGrayscalling_Click);
+            this.btnShowImageBinary.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnShowImageBinary.Enabled = false;
+            this.btnShowImageBinary.Location = new System.Drawing.Point(780, 3);
+            this.btnShowImageBinary.Name = "btnShowImageBinary";
+            this.btnShowImageBinary.Size = new System.Drawing.Size(253, 194);
+            this.btnShowImageBinary.TabIndex = 7;
+            this.btnShowImageBinary.Text = "Tampilkan Gambar";
+            this.btnShowImageBinary.UseVisualStyleBackColor = true;
+            this.btnShowImageBinary.Click += new System.EventHandler(this.btnShowImageBinary_Click);
+            // 
+            // btnShowImageGaussianFiltering
+            // 
+            this.btnShowImageGaussianFiltering.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnShowImageGaussianFiltering.Enabled = false;
+            this.btnShowImageGaussianFiltering.Location = new System.Drawing.Point(521, 3);
+            this.btnShowImageGaussianFiltering.Name = "btnShowImageGaussianFiltering";
+            this.btnShowImageGaussianFiltering.Size = new System.Drawing.Size(253, 194);
+            this.btnShowImageGaussianFiltering.TabIndex = 6;
+            this.btnShowImageGaussianFiltering.Text = "Tamplikan Gambar";
+            this.btnShowImageGaussianFiltering.UseVisualStyleBackColor = true;
+            this.btnShowImageGaussianFiltering.Click += new System.EventHandler(this.btnShowImageGaussianFiltering_Click);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label32.Location = new System.Drawing.Point(3, 200);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(253, 44);
+            this.label32.TabIndex = 3;
+            this.label32.Text = "Parameter Bebas";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label33.Location = new System.Drawing.Point(262, 200);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(253, 44);
+            this.label33.TabIndex = 0;
+            this.label33.Text = "Grayscalling";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label34.Location = new System.Drawing.Point(521, 200);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(253, 44);
+            this.label34.TabIndex = 1;
+            this.label34.Text = "Gaussian Filtering";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label35.Location = new System.Drawing.Point(780, 200);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(253, 44);
+            this.label35.TabIndex = 2;
+            this.label35.Text = "Binerisasi";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel20
             // 
@@ -594,23 +467,16 @@
             this.tableLayoutPanel20.Size = new System.Drawing.Size(253, 194);
             this.tableLayoutPanel20.TabIndex = 4;
             // 
-            // tbLengthGaussianFilterParagraph
+            // label36
             // 
-            this.tbLengthGaussianFilterParagraph.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbLengthGaussianFilterParagraph.Enabled = false;
-            this.tbLengthGaussianFilterParagraph.Location = new System.Drawing.Point(81, 3);
-            this.tbLengthGaussianFilterParagraph.Name = "tbLengthGaussianFilterParagraph";
-            this.tbLengthGaussianFilterParagraph.Size = new System.Drawing.Size(169, 20);
-            this.tbLengthGaussianFilterParagraph.TabIndex = 6;
-            // 
-            // tbWeightGaussianFilterParagraph
-            // 
-            this.tbWeightGaussianFilterParagraph.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbWeightGaussianFilterParagraph.Enabled = false;
-            this.tbWeightGaussianFilterParagraph.Location = new System.Drawing.Point(81, 100);
-            this.tbWeightGaussianFilterParagraph.Name = "tbWeightGaussianFilterParagraph";
-            this.tbWeightGaussianFilterParagraph.Size = new System.Drawing.Size(169, 20);
-            this.tbWeightGaussianFilterParagraph.TabIndex = 5;
+            this.label36.AutoSize = true;
+            this.label36.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label36.Location = new System.Drawing.Point(3, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(72, 97);
+            this.label36.TabIndex = 2;
+            this.label36.Text = "Panjang Gaussian Filter";
+            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label37
             // 
@@ -623,95 +489,231 @@
             this.label37.Text = "Bobot Gaussian Filter";
             this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label36
+            // tbWeightGaussianFilterParagraph
             // 
-            this.label36.AutoSize = true;
-            this.label36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label36.Location = new System.Drawing.Point(3, 0);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(72, 97);
-            this.label36.TabIndex = 2;
-            this.label36.Text = "Panjang Gaussian Filter";
-            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tbWeightGaussianFilterParagraph.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbWeightGaussianFilterParagraph.Enabled = false;
+            this.tbWeightGaussianFilterParagraph.Location = new System.Drawing.Point(81, 100);
+            this.tbWeightGaussianFilterParagraph.Name = "tbWeightGaussianFilterParagraph";
+            this.tbWeightGaussianFilterParagraph.Size = new System.Drawing.Size(169, 20);
+            this.tbWeightGaussianFilterParagraph.TabIndex = 5;
             // 
-            // label35
+            // tbLengthGaussianFilterParagraph
             // 
-            this.label35.AutoSize = true;
-            this.label35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label35.Location = new System.Drawing.Point(780, 200);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(253, 44);
-            this.label35.TabIndex = 2;
-            this.label35.Text = "Binerisasi";
-            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tbLengthGaussianFilterParagraph.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbLengthGaussianFilterParagraph.Enabled = false;
+            this.tbLengthGaussianFilterParagraph.Location = new System.Drawing.Point(81, 3);
+            this.tbLengthGaussianFilterParagraph.Name = "tbLengthGaussianFilterParagraph";
+            this.tbLengthGaussianFilterParagraph.Size = new System.Drawing.Size(169, 20);
+            this.tbLengthGaussianFilterParagraph.TabIndex = 6;
             // 
-            // label34
+            // btnShowImageGrayscalling
             // 
-            this.label34.AutoSize = true;
-            this.label34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label34.Location = new System.Drawing.Point(521, 200);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(253, 44);
-            this.label34.TabIndex = 1;
-            this.label34.Text = "Gaussian Filtering";
-            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnShowImageGrayscalling.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnShowImageGrayscalling.Enabled = false;
+            this.btnShowImageGrayscalling.Location = new System.Drawing.Point(262, 3);
+            this.btnShowImageGrayscalling.Name = "btnShowImageGrayscalling";
+            this.btnShowImageGrayscalling.Size = new System.Drawing.Size(253, 194);
+            this.btnShowImageGrayscalling.TabIndex = 5;
+            this.btnShowImageGrayscalling.Text = "Tampilkan Gambar";
+            this.btnShowImageGrayscalling.UseVisualStyleBackColor = true;
+            this.btnShowImageGrayscalling.Click += new System.EventHandler(this.btnShowImageGrayscalling_Click);
             // 
-            // label33
+            // btnPreprocessingParagraph
             // 
-            this.label33.AutoSize = true;
-            this.label33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label33.Location = new System.Drawing.Point(262, 200);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(253, 44);
-            this.label33.TabIndex = 0;
-            this.label33.Text = "Grayscalling";
-            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPreprocessingParagraph.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPreprocessingParagraph.Enabled = false;
+            this.btnPreprocessingParagraph.Location = new System.Drawing.Point(267, 253);
+            this.btnPreprocessingParagraph.Name = "btnPreprocessingParagraph";
+            this.btnPreprocessingParagraph.Size = new System.Drawing.Size(1036, 47);
+            this.btnPreprocessingParagraph.TabIndex = 6;
+            this.btnPreprocessingParagraph.Text = "Preprocessing Paragraph";
+            this.btnPreprocessingParagraph.UseVisualStyleBackColor = true;
+            this.btnPreprocessingParagraph.Click += new System.EventHandler(this.btnPreprocessingParagraph_Click);
             // 
-            // label32
+            // btnShowRealImage
             // 
-            this.label32.AutoSize = true;
-            this.label32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label32.Location = new System.Drawing.Point(3, 200);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(253, 44);
-            this.label32.TabIndex = 3;
-            this.label32.Text = "Parameter Bebas";
-            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnShowRealImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnShowRealImage.Enabled = false;
+            this.btnShowRealImage.Location = new System.Drawing.Point(3, 3);
+            this.btnShowRealImage.Name = "btnShowRealImage";
+            this.btnShowRealImage.Size = new System.Drawing.Size(258, 244);
+            this.btnShowRealImage.TabIndex = 7;
+            this.btnShowRealImage.Text = "Tampilkan Gambar";
+            this.btnShowRealImage.UseVisualStyleBackColor = true;
+            this.btnShowRealImage.Click += new System.EventHandler(this.btnShowRealImage_Click);
             // 
-            // btnShowImageGaussianFiltering
+            // tableLayoutPanel22
             // 
-            this.btnShowImageGaussianFiltering.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnShowImageGaussianFiltering.Enabled = false;
-            this.btnShowImageGaussianFiltering.Location = new System.Drawing.Point(521, 3);
-            this.btnShowImageGaussianFiltering.Name = "btnShowImageGaussianFiltering";
-            this.btnShowImageGaussianFiltering.Size = new System.Drawing.Size(253, 194);
-            this.btnShowImageGaussianFiltering.TabIndex = 6;
-            this.btnShowImageGaussianFiltering.Text = "Tamplikan Gambar";
-            this.btnShowImageGaussianFiltering.UseVisualStyleBackColor = true;
-            this.btnShowImageGaussianFiltering.Click += new System.EventHandler(this.btnShowImageGaussianFiltering_Click);
+            this.tableLayoutPanel22.ColumnCount = 2;
+            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel22.Controls.Add(this.btnFeatureExtractionParagraph, 1, 0);
+            this.tableLayoutPanel22.Controls.Add(this.btnProfileProjection, 0, 0);
+            this.tableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel22.Location = new System.Drawing.Point(3, 621);
+            this.tableLayoutPanel22.Name = "tableLayoutPanel22";
+            this.tableLayoutPanel22.RowCount = 1;
+            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel22.Size = new System.Drawing.Size(1306, 46);
+            this.tableLayoutPanel22.TabIndex = 3;
             // 
-            // btnShowImageBinary
+            // btnFeatureExtractionParagraph
             // 
-            this.btnShowImageBinary.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnShowImageBinary.Enabled = false;
-            this.btnShowImageBinary.Location = new System.Drawing.Point(780, 3);
-            this.btnShowImageBinary.Name = "btnShowImageBinary";
-            this.btnShowImageBinary.Size = new System.Drawing.Size(253, 194);
-            this.btnShowImageBinary.TabIndex = 7;
-            this.btnShowImageBinary.Text = "Tampilkan Gambar";
-            this.btnShowImageBinary.UseVisualStyleBackColor = true;
-            this.btnShowImageBinary.Click += new System.EventHandler(this.btnShowImageBinary_Click);
+            this.btnFeatureExtractionParagraph.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnFeatureExtractionParagraph.Enabled = false;
+            this.btnFeatureExtractionParagraph.Location = new System.Drawing.Point(656, 3);
+            this.btnFeatureExtractionParagraph.Name = "btnFeatureExtractionParagraph";
+            this.btnFeatureExtractionParagraph.Size = new System.Drawing.Size(647, 40);
+            this.btnFeatureExtractionParagraph.TabIndex = 2;
+            this.btnFeatureExtractionParagraph.Text = "Extraksi Ciri";
+            this.btnFeatureExtractionParagraph.UseVisualStyleBackColor = true;
+            this.btnFeatureExtractionParagraph.Click += new System.EventHandler(this.btnFeatureExtractionParagraph_Click);
             // 
-            // btnOpenImageParagraph
+            // btnProfileProjection
             // 
-            this.btnOpenImageParagraph.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnOpenImageParagraph.Location = new System.Drawing.Point(3, 253);
-            this.btnOpenImageParagraph.Name = "btnOpenImageParagraph";
-            this.btnOpenImageParagraph.Size = new System.Drawing.Size(258, 47);
-            this.btnOpenImageParagraph.TabIndex = 4;
-            this.btnOpenImageParagraph.Text = "Open Image Paragraph";
-            this.btnOpenImageParagraph.UseVisualStyleBackColor = true;
-            this.btnOpenImageParagraph.Click += new System.EventHandler(this.btnOpenImageParagraph_Click);
+            this.btnProfileProjection.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnProfileProjection.Enabled = false;
+            this.btnProfileProjection.Location = new System.Drawing.Point(3, 3);
+            this.btnProfileProjection.Name = "btnProfileProjection";
+            this.btnProfileProjection.Size = new System.Drawing.Size(647, 40);
+            this.btnProfileProjection.TabIndex = 3;
+            this.btnProfileProjection.Text = "Profile Projection";
+            this.btnProfileProjection.UseVisualStyleBackColor = true;
+            this.btnProfileProjection.Click += new System.EventHandler(this.btnProfileProjection_Click);
+            // 
+            // tableLayoutPanel23
+            // 
+            this.tableLayoutPanel23.ColumnCount = 2;
+            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel23.Controls.Add(this.tableLayoutPanel24, 0, 0);
+            this.tableLayoutPanel23.Controls.Add(this.dataFiturParagraf, 1, 0);
+            this.tableLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel23.Location = new System.Drawing.Point(3, 312);
+            this.tableLayoutPanel23.Name = "tableLayoutPanel23";
+            this.tableLayoutPanel23.RowCount = 1;
+            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.56106F));
+            this.tableLayoutPanel23.Size = new System.Drawing.Size(1306, 303);
+            this.tableLayoutPanel23.TabIndex = 4;
+            // 
+            // tableLayoutPanel24
+            // 
+            this.tableLayoutPanel24.ColumnCount = 2;
+            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel24.Controls.Add(this.listViewHorizontally, 1, 1);
+            this.tableLayoutPanel24.Controls.Add(this.listViewVertically, 0, 1);
+            this.tableLayoutPanel24.Controls.Add(this.tableLayoutPanel25, 0, 0);
+            this.tableLayoutPanel24.Controls.Add(this.tableLayoutPanel26, 1, 0);
+            this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel24.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel24.Name = "tableLayoutPanel24";
+            this.tableLayoutPanel24.RowCount = 2;
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.10101F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.89899F));
+            this.tableLayoutPanel24.Size = new System.Drawing.Size(647, 297);
+            this.tableLayoutPanel24.TabIndex = 0;
+            // 
+            // listViewHorizontally
+            // 
+            this.listViewHorizontally.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewHorizontally.Location = new System.Drawing.Point(326, 33);
+            this.listViewHorizontally.Name = "listViewHorizontally";
+            this.listViewHorizontally.Size = new System.Drawing.Size(318, 261);
+            this.listViewHorizontally.TabIndex = 3;
+            this.listViewHorizontally.UseCompatibleStateImageBehavior = false;
+            this.listViewHorizontally.SelectedIndexChanged += new System.EventHandler(this.listViewHorizontally_SelectedIndexChanged);
+            // 
+            // listViewVertically
+            // 
+            this.listViewVertically.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewVertically.Location = new System.Drawing.Point(3, 33);
+            this.listViewVertically.Name = "listViewVertically";
+            this.listViewVertically.Size = new System.Drawing.Size(317, 261);
+            this.listViewVertically.TabIndex = 0;
+            this.listViewVertically.UseCompatibleStateImageBehavior = false;
+            this.listViewVertically.SelectedIndexChanged += new System.EventHandler(this.listViewVertically_SelectedIndexChanged);
+            // 
+            // tableLayoutPanel25
+            // 
+            this.tableLayoutPanel25.ColumnCount = 2;
+            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel25.Controls.Add(this.label38, 0, 0);
+            this.tableLayoutPanel25.Controls.Add(this.numVertically, 1, 0);
+            this.tableLayoutPanel25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel25.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel25.Name = "tableLayoutPanel25";
+            this.tableLayoutPanel25.RowCount = 1;
+            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel25.Size = new System.Drawing.Size(317, 24);
+            this.tableLayoutPanel25.TabIndex = 4;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label38.Location = new System.Drawing.Point(3, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(152, 24);
+            this.label38.TabIndex = 0;
+            this.label38.Text = "Threshold Vertically (%)";
+            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // numVertically
+            // 
+            this.numVertically.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numVertically.Enabled = false;
+            this.numVertically.Location = new System.Drawing.Point(161, 3);
+            this.numVertically.Name = "numVertically";
+            this.numVertically.Size = new System.Drawing.Size(153, 20);
+            this.numVertically.TabIndex = 1;
+            // 
+            // tableLayoutPanel26
+            // 
+            this.tableLayoutPanel26.ColumnCount = 2;
+            this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel26.Controls.Add(this.label39, 0, 0);
+            this.tableLayoutPanel26.Controls.Add(this.numHorizontally, 1, 0);
+            this.tableLayoutPanel26.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel26.Location = new System.Drawing.Point(326, 3);
+            this.tableLayoutPanel26.Name = "tableLayoutPanel26";
+            this.tableLayoutPanel26.RowCount = 1;
+            this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel26.Size = new System.Drawing.Size(318, 24);
+            this.tableLayoutPanel26.TabIndex = 5;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label39.Location = new System.Drawing.Point(3, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(153, 24);
+            this.label39.TabIndex = 0;
+            this.label39.Text = "Threshold Horizontally (%)";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // numHorizontally
+            // 
+            this.numHorizontally.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numHorizontally.Enabled = false;
+            this.numHorizontally.Location = new System.Drawing.Point(162, 3);
+            this.numHorizontally.Name = "numHorizontally";
+            this.numHorizontally.Size = new System.Drawing.Size(153, 20);
+            this.numHorizontally.TabIndex = 1;
+            // 
+            // dataFiturParagraf
+            // 
+            this.dataFiturParagraf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataFiturParagraf.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataFiturParagraf.Location = new System.Drawing.Point(656, 3);
+            this.dataFiturParagraf.Name = "dataFiturParagraf";
+            this.dataFiturParagraf.Size = new System.Drawing.Size(647, 297);
+            this.dataFiturParagraf.TabIndex = 1;
             // 
             // tabDataTrainingBPNN
             // 
@@ -738,67 +740,6 @@
             this.tlpBPNN.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.74627F));
             this.tlpBPNN.Size = new System.Drawing.Size(1312, 670);
             this.tlpBPNN.TabIndex = 0;
-            // 
-            // tableLayoutPanel21
-            // 
-            this.tableLayoutPanel21.ColumnCount = 1;
-            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel21.Controls.Add(this.dgViewWeightResult, 0, 1);
-            this.tableLayoutPanel21.Controls.Add(this.tableLayoutPanel16, 0, 0);
-            this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel21.Location = new System.Drawing.Point(3, 65);
-            this.tableLayoutPanel21.Name = "tableLayoutPanel21";
-            this.tableLayoutPanel21.RowCount = 2;
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.637874F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.36213F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(1306, 602);
-            this.tableLayoutPanel21.TabIndex = 2;
-            // 
-            // tableLayoutPanel16
-            // 
-            this.tableLayoutPanel16.ColumnCount = 2;
-            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel16.Controls.Add(this.label28, 0, 0);
-            this.tableLayoutPanel16.Controls.Add(this.checkDisplayWeight, 1, 0);
-            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
-            this.tableLayoutPanel16.RowCount = 1;
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(1300, 45);
-            this.tableLayoutPanel16.TabIndex = 2;
-            // 
-            // checkDisplayWeight
-            // 
-            this.checkDisplayWeight.AutoSize = true;
-            this.checkDisplayWeight.Location = new System.Drawing.Point(653, 3);
-            this.checkDisplayWeight.Name = "checkDisplayWeight";
-            this.checkDisplayWeight.Size = new System.Drawing.Size(190, 17);
-            this.checkDisplayWeight.TabIndex = 2;
-            this.checkDisplayWeight.Text = "Tampilkan bobot akhir pada table?";
-            this.checkDisplayWeight.UseVisualStyleBackColor = true;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(3, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(644, 45);
-            this.label28.TabIndex = 1;
-            this.label28.Text = "Bobot Akhir BPNN";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dgViewWeightResult
-            // 
-            this.dgViewWeightResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgViewWeightResult.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgViewWeightResult.Location = new System.Drawing.Point(3, 54);
-            this.dgViewWeightResult.Name = "dgViewWeightResult";
-            this.dgViewWeightResult.Size = new System.Drawing.Size(1300, 545);
-            this.dgViewWeightResult.TabIndex = 1;
             // 
             // tableLayoutPanel19
             // 
@@ -833,6 +774,164 @@
             this.tableLayoutPanel19.Size = new System.Drawing.Size(1306, 56);
             this.tableLayoutPanel19.TabIndex = 1;
             // 
+            // numLearningRate
+            // 
+            this.numLearningRate.DecimalPlaces = 5;
+            this.numLearningRate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numLearningRate.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            327680});
+            this.numLearningRate.Location = new System.Drawing.Point(829, 3);
+            this.numLearningRate.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numLearningRate.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            327680});
+            this.numLearningRate.Name = "numLearningRate";
+            this.numLearningRate.Size = new System.Drawing.Size(112, 20);
+            this.numLearningRate.TabIndex = 7;
+            this.numLearningRate.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            327680});
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label30.Location = new System.Drawing.Point(711, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(112, 56);
+            this.label30.TabIndex = 6;
+            this.label30.Text = "Learning Rate";
+            // 
+            // numMaxEpochs
+            // 
+            this.numMaxEpochs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numMaxEpochs.Location = new System.Drawing.Point(593, 3);
+            this.numMaxEpochs.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numMaxEpochs.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numMaxEpochs.Name = "numMaxEpochs";
+            this.numMaxEpochs.Size = new System.Drawing.Size(112, 20);
+            this.numMaxEpochs.TabIndex = 5;
+            this.numMaxEpochs.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label29.Location = new System.Drawing.Point(475, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(112, 56);
+            this.label29.TabIndex = 4;
+            this.label29.Text = "Maximum Epochs";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label26.Location = new System.Drawing.Point(3, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(112, 56);
+            this.label26.TabIndex = 1;
+            this.label26.Text = "Jumlah Hidden Neuron";
+            // 
+            // numHiddenNeuron
+            // 
+            this.numHiddenNeuron.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numHiddenNeuron.Location = new System.Drawing.Point(121, 3);
+            this.numHiddenNeuron.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numHiddenNeuron.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numHiddenNeuron.Name = "numHiddenNeuron";
+            this.numHiddenNeuron.Size = new System.Drawing.Size(112, 20);
+            this.numHiddenNeuron.TabIndex = 2;
+            this.numHiddenNeuron.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label27.Location = new System.Drawing.Point(239, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(112, 56);
+            this.label27.TabIndex = 3;
+            this.label27.Text = "Jumlah Layer";
+            // 
+            // numLayers
+            // 
+            this.numLayers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numLayers.Location = new System.Drawing.Point(357, 3);
+            this.numLayers.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numLayers.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numLayers.Name = "numLayers";
+            this.numLayers.Size = new System.Drawing.Size(112, 20);
+            this.numLayers.TabIndex = 0;
+            this.numLayers.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // btnTraining
+            // 
+            this.btnTraining.Location = new System.Drawing.Point(1183, 3);
+            this.btnTraining.Name = "btnTraining";
+            this.btnTraining.Size = new System.Drawing.Size(120, 50);
+            this.btnTraining.TabIndex = 1;
+            this.btnTraining.Text = "Training";
+            this.btnTraining.UseVisualStyleBackColor = true;
+            this.btnTraining.Click += new System.EventHandler(this.btnTraining_Click);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label31.Location = new System.Drawing.Point(947, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(112, 56);
+            this.label31.TabIndex = 8;
+            this.label31.Text = "Momentum";
+            // 
             // numMomentum
             // 
             this.numMomentum.DecimalPlaces = 5;
@@ -862,163 +961,66 @@
             0,
             327680});
             // 
-            // label31
+            // tableLayoutPanel21
             // 
-            this.label31.AutoSize = true;
-            this.label31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label31.Location = new System.Drawing.Point(947, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(112, 56);
-            this.label31.TabIndex = 8;
-            this.label31.Text = "Momentum";
+            this.tableLayoutPanel21.ColumnCount = 1;
+            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel21.Controls.Add(this.dgViewWeightResult, 0, 1);
+            this.tableLayoutPanel21.Controls.Add(this.tableLayoutPanel16, 0, 0);
+            this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel21.Location = new System.Drawing.Point(3, 65);
+            this.tableLayoutPanel21.Name = "tableLayoutPanel21";
+            this.tableLayoutPanel21.RowCount = 2;
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.637874F));
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.36213F));
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(1306, 602);
+            this.tableLayoutPanel21.TabIndex = 2;
             // 
-            // btnTraining
+            // dgViewWeightResult
             // 
-            this.btnTraining.Location = new System.Drawing.Point(1183, 3);
-            this.btnTraining.Name = "btnTraining";
-            this.btnTraining.Size = new System.Drawing.Size(120, 50);
-            this.btnTraining.TabIndex = 1;
-            this.btnTraining.Text = "Training";
-            this.btnTraining.UseVisualStyleBackColor = true;
-            this.btnTraining.Click += new System.EventHandler(this.btnTraining_Click);
+            this.dgViewWeightResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgViewWeightResult.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgViewWeightResult.Location = new System.Drawing.Point(3, 54);
+            this.dgViewWeightResult.Name = "dgViewWeightResult";
+            this.dgViewWeightResult.Size = new System.Drawing.Size(1300, 545);
+            this.dgViewWeightResult.TabIndex = 1;
             // 
-            // numLayers
+            // tableLayoutPanel16
             // 
-            this.numLayers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numLayers.Location = new System.Drawing.Point(357, 3);
-            this.numLayers.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.numLayers.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numLayers.Name = "numLayers";
-            this.numLayers.Size = new System.Drawing.Size(112, 20);
-            this.numLayers.TabIndex = 0;
-            this.numLayers.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.tableLayoutPanel16.ColumnCount = 2;
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel16.Controls.Add(this.label28, 0, 0);
+            this.tableLayoutPanel16.Controls.Add(this.checkDisplayWeight, 1, 0);
+            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
+            this.tableLayoutPanel16.RowCount = 1;
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(1300, 45);
+            this.tableLayoutPanel16.TabIndex = 2;
             // 
-            // label27
+            // label28
             // 
-            this.label27.AutoSize = true;
-            this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label27.Location = new System.Drawing.Point(239, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(112, 56);
-            this.label27.TabIndex = 3;
-            this.label27.Text = "Jumlah Layer";
+            this.label28.AutoSize = true;
+            this.label28.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(3, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(644, 45);
+            this.label28.TabIndex = 1;
+            this.label28.Text = "Bobot Akhir BPNN";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // numHiddenNeuron
+            // checkDisplayWeight
             // 
-            this.numHiddenNeuron.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numHiddenNeuron.Location = new System.Drawing.Point(121, 3);
-            this.numHiddenNeuron.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.numHiddenNeuron.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numHiddenNeuron.Name = "numHiddenNeuron";
-            this.numHiddenNeuron.Size = new System.Drawing.Size(112, 20);
-            this.numHiddenNeuron.TabIndex = 2;
-            this.numHiddenNeuron.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label26.Location = new System.Drawing.Point(3, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(112, 56);
-            this.label26.TabIndex = 1;
-            this.label26.Text = "Jumlah Hidden Neuron";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label29.Location = new System.Drawing.Point(475, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(112, 56);
-            this.label29.TabIndex = 4;
-            this.label29.Text = "Maximum Epochs";
-            // 
-            // numMaxEpochs
-            // 
-            this.numMaxEpochs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numMaxEpochs.Location = new System.Drawing.Point(593, 3);
-            this.numMaxEpochs.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.numMaxEpochs.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numMaxEpochs.Name = "numMaxEpochs";
-            this.numMaxEpochs.Size = new System.Drawing.Size(112, 20);
-            this.numMaxEpochs.TabIndex = 5;
-            this.numMaxEpochs.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label30.Location = new System.Drawing.Point(711, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(112, 56);
-            this.label30.TabIndex = 6;
-            this.label30.Text = "Learning Rate";
-            // 
-            // numLearningRate
-            // 
-            this.numLearningRate.DecimalPlaces = 5;
-            this.numLearningRate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numLearningRate.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            327680});
-            this.numLearningRate.Location = new System.Drawing.Point(829, 3);
-            this.numLearningRate.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numLearningRate.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            327680});
-            this.numLearningRate.Name = "numLearningRate";
-            this.numLearningRate.Size = new System.Drawing.Size(112, 20);
-            this.numLearningRate.TabIndex = 7;
-            this.numLearningRate.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            327680});
+            this.checkDisplayWeight.AutoSize = true;
+            this.checkDisplayWeight.Location = new System.Drawing.Point(653, 3);
+            this.checkDisplayWeight.Name = "checkDisplayWeight";
+            this.checkDisplayWeight.Size = new System.Drawing.Size(190, 17);
+            this.checkDisplayWeight.TabIndex = 2;
+            this.checkDisplayWeight.Text = "Tampilkan bobot akhir pada table?";
+            this.checkDisplayWeight.UseVisualStyleBackColor = true;
             // 
             // tabDataTraining
             // 
@@ -1049,42 +1051,6 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(1306, 664);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
-            // dataFiturTraining
-            // 
-            this.dataFiturTraining.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataFiturTraining.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataFiturTraining.Location = new System.Drawing.Point(3, 309);
-            this.dataFiturTraining.Name = "dataFiturTraining";
-            this.dataFiturTraining.ReadOnly = true;
-            this.dataFiturTraining.Size = new System.Drawing.Size(1300, 300);
-            this.dataFiturTraining.TabIndex = 4;
-            // 
-            // tableLayoutPanel12
-            // 
-            this.tableLayoutPanel12.ColumnCount = 2;
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel12.Controls.Add(this.btnFeatureExtractionTraining, 0, 0);
-            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 615);
-            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
-            this.tableLayoutPanel12.RowCount = 1;
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(1300, 46);
-            this.tableLayoutPanel12.TabIndex = 3;
-            // 
-            // btnFeatureExtractionTraining
-            // 
-            this.btnFeatureExtractionTraining.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnFeatureExtractionTraining.Enabled = false;
-            this.btnFeatureExtractionTraining.Location = new System.Drawing.Point(572, 3);
-            this.btnFeatureExtractionTraining.Name = "btnFeatureExtractionTraining";
-            this.btnFeatureExtractionTraining.Size = new System.Drawing.Size(75, 40);
-            this.btnFeatureExtractionTraining.TabIndex = 2;
-            this.btnFeatureExtractionTraining.Text = "Extraksi Ciri";
-            this.btnFeatureExtractionTraining.UseVisualStyleBackColor = true;
-            this.btnFeatureExtractionTraining.Click += new System.EventHandler(this.btnFeatureExtractionTraining_Click);
-            // 
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.ColumnCount = 2;
@@ -1103,17 +1069,25 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(1300, 300);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
-            // btnPreprocessingTraining
+            // listViewRealImageTraining
             // 
-            this.btnPreprocessingTraining.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPreprocessingTraining.Enabled = false;
-            this.btnPreprocessingTraining.Location = new System.Drawing.Point(266, 250);
-            this.btnPreprocessingTraining.Name = "btnPreprocessingTraining";
-            this.btnPreprocessingTraining.Size = new System.Drawing.Size(1031, 47);
-            this.btnPreprocessingTraining.TabIndex = 6;
-            this.btnPreprocessingTraining.Text = "Preprocessing";
-            this.btnPreprocessingTraining.UseVisualStyleBackColor = true;
-            this.btnPreprocessingTraining.Click += new System.EventHandler(this.btnPreprocessingTraining_Click);
+            this.listViewRealImageTraining.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewRealImageTraining.Location = new System.Drawing.Point(3, 3);
+            this.listViewRealImageTraining.Name = "listViewRealImageTraining";
+            this.listViewRealImageTraining.Size = new System.Drawing.Size(257, 241);
+            this.listViewRealImageTraining.TabIndex = 0;
+            this.listViewRealImageTraining.UseCompatibleStateImageBehavior = false;
+            // 
+            // btnOpenImageTraining
+            // 
+            this.btnOpenImageTraining.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnOpenImageTraining.Location = new System.Drawing.Point(3, 250);
+            this.btnOpenImageTraining.Name = "btnOpenImageTraining";
+            this.btnOpenImageTraining.Size = new System.Drawing.Size(257, 47);
+            this.btnOpenImageTraining.TabIndex = 4;
+            this.btnOpenImageTraining.Text = "Open Image";
+            this.btnOpenImageTraining.UseVisualStyleBackColor = true;
+            this.btnOpenImageTraining.Click += new System.EventHandler(this.btnOpenImageTraining_Click);
             // 
             // tableLayoutPanel29
             // 
@@ -1139,6 +1113,77 @@
             this.tableLayoutPanel29.Size = new System.Drawing.Size(1031, 241);
             this.tableLayoutPanel29.TabIndex = 5;
             // 
+            // listViewBinerisasiTraining
+            // 
+            this.listViewBinerisasiTraining.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewBinerisasiTraining.Location = new System.Drawing.Point(774, 3);
+            this.listViewBinerisasiTraining.Name = "listViewBinerisasiTraining";
+            this.listViewBinerisasiTraining.Size = new System.Drawing.Size(254, 192);
+            this.listViewBinerisasiTraining.TabIndex = 7;
+            this.listViewBinerisasiTraining.UseCompatibleStateImageBehavior = false;
+            // 
+            // listViewGaussianFilteringTraining
+            // 
+            this.listViewGaussianFilteringTraining.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewGaussianFilteringTraining.Location = new System.Drawing.Point(517, 3);
+            this.listViewGaussianFilteringTraining.Name = "listViewGaussianFilteringTraining";
+            this.listViewGaussianFilteringTraining.Size = new System.Drawing.Size(251, 192);
+            this.listViewGaussianFilteringTraining.TabIndex = 6;
+            this.listViewGaussianFilteringTraining.UseCompatibleStateImageBehavior = false;
+            // 
+            // listViewGrayscallingTraining
+            // 
+            this.listViewGrayscallingTraining.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewGrayscallingTraining.Location = new System.Drawing.Point(260, 3);
+            this.listViewGrayscallingTraining.Name = "listViewGrayscallingTraining";
+            this.listViewGrayscallingTraining.Size = new System.Drawing.Size(251, 192);
+            this.listViewGrayscallingTraining.TabIndex = 5;
+            this.listViewGrayscallingTraining.UseCompatibleStateImageBehavior = false;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label17.Location = new System.Drawing.Point(3, 198);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(251, 43);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "Parameter Bebas";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label14.Location = new System.Drawing.Point(260, 198);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(251, 43);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Grayscalling";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label15.Location = new System.Drawing.Point(517, 198);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(251, 43);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Gaussian Filtering";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label16.Location = new System.Drawing.Point(774, 198);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(254, 43);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "Binerisasi";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanel30
             // 
             this.tableLayoutPanel30.ColumnCount = 2;
@@ -1159,54 +1204,6 @@
             this.tableLayoutPanel30.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel30.Size = new System.Drawing.Size(251, 192);
             this.tableLayoutPanel30.TabIndex = 4;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label19.Location = new System.Drawing.Point(3, 96);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(70, 96);
-            this.label19.TabIndex = 3;
-            this.label19.Text = "Bobot Gaussian Filter";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label18.Location = new System.Drawing.Point(3, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(70, 96);
-            this.label18.TabIndex = 2;
-            this.label18.Text = "Panjang Gaussian Filter";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // numWeightGaussian
-            // 
-            this.numWeightGaussian.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numWeightGaussian.Enabled = false;
-            this.numWeightGaussian.Location = new System.Drawing.Point(79, 99);
-            this.numWeightGaussian.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numWeightGaussian.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numWeightGaussian.Name = "numWeightGaussian";
-            this.numWeightGaussian.Size = new System.Drawing.Size(169, 20);
-            this.numWeightGaussian.TabIndex = 1;
-            this.numWeightGaussian.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numWeightGaussian.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numWeightGaussian.ValueChanged += new System.EventHandler(this.numWeightGaussian_ValueChanged);
             // 
             // numLengthGaussian
             // 
@@ -1234,96 +1231,101 @@
             0});
             this.numLengthGaussian.ValueChanged += new System.EventHandler(this.numLengthGaussian_ValueChanged);
             // 
-            // label16
+            // numWeightGaussian
             // 
-            this.label16.AutoSize = true;
-            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.Location = new System.Drawing.Point(774, 198);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(254, 43);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "Binerisasi";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.numWeightGaussian.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numWeightGaussian.Enabled = false;
+            this.numWeightGaussian.Location = new System.Drawing.Point(79, 99);
+            this.numWeightGaussian.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numWeightGaussian.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numWeightGaussian.Name = "numWeightGaussian";
+            this.numWeightGaussian.Size = new System.Drawing.Size(169, 20);
+            this.numWeightGaussian.TabIndex = 1;
+            this.numWeightGaussian.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numWeightGaussian.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numWeightGaussian.ValueChanged += new System.EventHandler(this.numWeightGaussian_ValueChanged);
             // 
-            // label15
+            // label18
             // 
-            this.label15.AutoSize = true;
-            this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label15.Location = new System.Drawing.Point(517, 198);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(251, 43);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "Gaussian Filtering";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label18.AutoSize = true;
+            this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label18.Location = new System.Drawing.Point(3, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(70, 96);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "Panjang Gaussian Filter";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label14
+            // label19
             // 
-            this.label14.AutoSize = true;
-            this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Location = new System.Drawing.Point(260, 198);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(251, 43);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Grayscalling";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label19.AutoSize = true;
+            this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label19.Location = new System.Drawing.Point(3, 96);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(70, 96);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "Bobot Gaussian Filter";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label17
+            // btnPreprocessingTraining
             // 
-            this.label17.AutoSize = true;
-            this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label17.Location = new System.Drawing.Point(3, 198);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(251, 43);
-            this.label17.TabIndex = 3;
-            this.label17.Text = "Parameter Bebas";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPreprocessingTraining.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPreprocessingTraining.Enabled = false;
+            this.btnPreprocessingTraining.Location = new System.Drawing.Point(266, 250);
+            this.btnPreprocessingTraining.Name = "btnPreprocessingTraining";
+            this.btnPreprocessingTraining.Size = new System.Drawing.Size(1031, 47);
+            this.btnPreprocessingTraining.TabIndex = 6;
+            this.btnPreprocessingTraining.Text = "Preprocessing";
+            this.btnPreprocessingTraining.UseVisualStyleBackColor = true;
+            this.btnPreprocessingTraining.Click += new System.EventHandler(this.btnPreprocessingTraining_Click);
             // 
-            // listViewGrayscallingTraining
+            // tableLayoutPanel12
             // 
-            this.listViewGrayscallingTraining.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewGrayscallingTraining.Location = new System.Drawing.Point(260, 3);
-            this.listViewGrayscallingTraining.Name = "listViewGrayscallingTraining";
-            this.listViewGrayscallingTraining.Size = new System.Drawing.Size(251, 192);
-            this.listViewGrayscallingTraining.TabIndex = 5;
-            this.listViewGrayscallingTraining.UseCompatibleStateImageBehavior = false;
+            this.tableLayoutPanel12.ColumnCount = 2;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel12.Controls.Add(this.btnFeatureExtractionTraining, 0, 0);
+            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 615);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 1;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(1300, 46);
+            this.tableLayoutPanel12.TabIndex = 3;
             // 
-            // listViewGaussianFilteringTraining
+            // btnFeatureExtractionTraining
             // 
-            this.listViewGaussianFilteringTraining.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewGaussianFilteringTraining.Location = new System.Drawing.Point(517, 3);
-            this.listViewGaussianFilteringTraining.Name = "listViewGaussianFilteringTraining";
-            this.listViewGaussianFilteringTraining.Size = new System.Drawing.Size(251, 192);
-            this.listViewGaussianFilteringTraining.TabIndex = 6;
-            this.listViewGaussianFilteringTraining.UseCompatibleStateImageBehavior = false;
+            this.btnFeatureExtractionTraining.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnFeatureExtractionTraining.Enabled = false;
+            this.btnFeatureExtractionTraining.Location = new System.Drawing.Point(572, 3);
+            this.btnFeatureExtractionTraining.Name = "btnFeatureExtractionTraining";
+            this.btnFeatureExtractionTraining.Size = new System.Drawing.Size(75, 40);
+            this.btnFeatureExtractionTraining.TabIndex = 2;
+            this.btnFeatureExtractionTraining.Text = "Extraksi Ciri";
+            this.btnFeatureExtractionTraining.UseVisualStyleBackColor = true;
+            this.btnFeatureExtractionTraining.Click += new System.EventHandler(this.btnFeatureExtractionTraining_Click);
             // 
-            // listViewBinerisasiTraining
+            // dataFiturTraining
             // 
-            this.listViewBinerisasiTraining.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewBinerisasiTraining.Location = new System.Drawing.Point(774, 3);
-            this.listViewBinerisasiTraining.Name = "listViewBinerisasiTraining";
-            this.listViewBinerisasiTraining.Size = new System.Drawing.Size(254, 192);
-            this.listViewBinerisasiTraining.TabIndex = 7;
-            this.listViewBinerisasiTraining.UseCompatibleStateImageBehavior = false;
-            // 
-            // btnOpenImageTraining
-            // 
-            this.btnOpenImageTraining.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnOpenImageTraining.Location = new System.Drawing.Point(3, 250);
-            this.btnOpenImageTraining.Name = "btnOpenImageTraining";
-            this.btnOpenImageTraining.Size = new System.Drawing.Size(257, 47);
-            this.btnOpenImageTraining.TabIndex = 4;
-            this.btnOpenImageTraining.Text = "Open Image";
-            this.btnOpenImageTraining.UseVisualStyleBackColor = true;
-            this.btnOpenImageTraining.Click += new System.EventHandler(this.btnOpenImageTraining_Click);
-            // 
-            // listViewRealImageTraining
-            // 
-            this.listViewRealImageTraining.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewRealImageTraining.Location = new System.Drawing.Point(3, 3);
-            this.listViewRealImageTraining.Name = "listViewRealImageTraining";
-            this.listViewRealImageTraining.Size = new System.Drawing.Size(257, 241);
-            this.listViewRealImageTraining.TabIndex = 0;
-            this.listViewRealImageTraining.UseCompatibleStateImageBehavior = false;
+            this.dataFiturTraining.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataFiturTraining.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataFiturTraining.Location = new System.Drawing.Point(3, 309);
+            this.dataFiturTraining.Name = "dataFiturTraining";
+            this.dataFiturTraining.ReadOnly = true;
+            this.dataFiturTraining.Size = new System.Drawing.Size(1300, 300);
+            this.dataFiturTraining.TabIndex = 4;
             // 
             // tabHome
             // 
@@ -1357,81 +1359,84 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1306, 664);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // tableLayoutPanel5
+            // tableLayoutPanel4
             // 
-            this.tableLayoutPanel5.ColumnCount = 1;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Controls.Add(this.label13, 0, 3);
-            this.tableLayoutPanel5.Controls.Add(this.label12, 0, 2);
-            this.tableLayoutPanel5.Controls.Add(this.label11, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.label10, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 531);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 4;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1300, 130);
-            this.tableLayoutPanel5.TabIndex = 4;
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.label6, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.label7, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.label8, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label9, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 267);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1300, 126);
+            this.tableLayoutPanel4.TabIndex = 2;
             // 
-            // label10
+            // label6
             // 
-            this.label10.AutoSize = true;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(3, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(1294, 32);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Informasi dari jurusan";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(653, 63);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(644, 63);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Nama Pembimbing II";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label11
+            // label7
             // 
-            this.label11.AutoSize = true;
-            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(3, 32);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(1294, 32);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Informasi dari sekolah tinggi";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label7.AutoSize = true;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 63);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(644, 63);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Nama Pembimbing I";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label12
+            // label8
             // 
-            this.label12.AutoSize = true;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(3, 64);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(1294, 32);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "Nama Kota";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(653, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(644, 63);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Pembimbing II (titel)";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label13
+            // label9
             // 
-            this.label13.AutoSize = true;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(3, 96);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(1294, 34);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "Tahun";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label9.AutoSize = true;
+            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(3, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(644, 63);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Pembimbing I (titel)";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pbMikroskil
+            // lbTitle
             // 
-            this.pbMikroskil.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbMikroskil.Location = new System.Drawing.Point(3, 399);
-            this.pbMikroskil.Name = "pbMikroskil";
-            this.pbMikroskil.Size = new System.Drawing.Size(1300, 126);
-            this.pbMikroskil.TabIndex = 3;
-            this.pbMikroskil.TabStop = false;
+            this.lbTitle.AutoSize = true;
+            this.lbTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitle.Location = new System.Drawing.Point(3, 0);
+            this.lbTitle.Name = "lbTitle";
+            this.lbTitle.Size = new System.Drawing.Size(1300, 132);
+            this.lbTitle.TabIndex = 0;
+            this.lbTitle.Text = "PATTERN RECOGNITION HANDWRITING CURSIVE USING PROJECTION-BASED SEGMENTATION METHO" +
+    "D AND ARTIFICIAL NEURAL NETWORK (ANN)";
+            this.lbTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel2
             // 
@@ -1447,6 +1452,18 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.15873F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1300, 126);
             this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1294, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "CREATED BY :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel3
             // 
@@ -1466,29 +1483,17 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1294, 95);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
-            // label2
+            // label5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(641, 47);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nama Mahasiswa I";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(650, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(641, 47);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "NIM Mahasiswa I";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(650, 47);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(641, 48);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "NIM Mahasiswa II";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label4
             // 
@@ -1502,108 +1507,105 @@
             this.label4.Text = "Nama Mahasiswa II";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label5
+            // label3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(650, 47);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(641, 48);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "NIM Mahasiswa II";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(650, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(641, 47);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "NIM Mahasiswa I";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1294, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CREATED BY :";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(641, 47);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Nama Mahasiswa I";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // lbTitle
+            // pbMikroskil
             // 
-            this.lbTitle.AutoSize = true;
-            this.lbTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.Location = new System.Drawing.Point(3, 0);
-            this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(1300, 132);
-            this.lbTitle.TabIndex = 0;
-            this.lbTitle.Text = "PATTERN RECOGNITION HANDWRITING CURSIVE USING PROJECTION-BASED SEGMENTATION METHO" +
-    "D AND ARTIFICIAL NEURAL NETWORK (ANN)";
-            this.lbTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pbMikroskil.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbMikroskil.Location = new System.Drawing.Point(3, 399);
+            this.pbMikroskil.Name = "pbMikroskil";
+            this.pbMikroskil.Size = new System.Drawing.Size(1300, 126);
+            this.pbMikroskil.TabIndex = 3;
+            this.pbMikroskil.TabStop = false;
             // 
-            // tableLayoutPanel4
+            // tableLayoutPanel5
             // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.label6, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.label7, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.label8, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label9, 0, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 267);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1300, 126);
-            this.tableLayoutPanel4.TabIndex = 2;
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Controls.Add(this.label13, 0, 3);
+            this.tableLayoutPanel5.Controls.Add(this.label12, 0, 2);
+            this.tableLayoutPanel5.Controls.Add(this.label11, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.label10, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 531);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 4;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1300, 130);
+            this.tableLayoutPanel5.TabIndex = 4;
             // 
-            // label9
+            // label13
             // 
-            this.label9.AutoSize = true;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(644, 63);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Pembimbing I (titel)";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label13.AutoSize = true;
+            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(3, 96);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(1294, 34);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Tahun";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label8
+            // label12
             // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(653, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(644, 63);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Pembimbing II (titel)";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label12.AutoSize = true;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(3, 64);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(1294, 32);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "Nama Kota";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label7
+            // label11
             // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 63);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(644, 63);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Nama Pembimbing I";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label11.AutoSize = true;
+            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(3, 32);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(1294, 32);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Informasi dari sekolah tinggi";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
+            // label10
             // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(653, 63);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(644, 63);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Nama Pembimbing II";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label10.AutoSize = true;
+            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(3, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(1294, 32);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Informasi dari jurusan";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabBase
             // 
@@ -1633,57 +1635,57 @@
             this.tableLayoutPanel15.ResumeLayout(false);
             this.tabTesting.ResumeLayout(false);
             this.tlpPengenalanParagraph.ResumeLayout(false);
-            this.tableLayoutPanel23.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataFiturParagraf)).EndInit();
-            this.tableLayoutPanel24.ResumeLayout(false);
-            this.tableLayoutPanel26.ResumeLayout(false);
-            this.tableLayoutPanel26.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numHorizontally)).EndInit();
-            this.tableLayoutPanel25.ResumeLayout(false);
-            this.tableLayoutPanel25.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numVertically)).EndInit();
-            this.tableLayoutPanel22.ResumeLayout(false);
             this.tableLayoutPanel13.ResumeLayout(false);
             this.tableLayoutPanel17.ResumeLayout(false);
             this.tableLayoutPanel17.PerformLayout();
             this.tableLayoutPanel20.ResumeLayout(false);
             this.tableLayoutPanel20.PerformLayout();
+            this.tableLayoutPanel22.ResumeLayout(false);
+            this.tableLayoutPanel23.ResumeLayout(false);
+            this.tableLayoutPanel24.ResumeLayout(false);
+            this.tableLayoutPanel25.ResumeLayout(false);
+            this.tableLayoutPanel25.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numVertically)).EndInit();
+            this.tableLayoutPanel26.ResumeLayout(false);
+            this.tableLayoutPanel26.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numHorizontally)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataFiturParagraf)).EndInit();
             this.tabDataTrainingBPNN.ResumeLayout(false);
             this.tlpBPNN.ResumeLayout(false);
-            this.tableLayoutPanel21.ResumeLayout(false);
-            this.tableLayoutPanel16.ResumeLayout(false);
-            this.tableLayoutPanel16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgViewWeightResult)).EndInit();
             this.tableLayoutPanel19.ResumeLayout(false);
             this.tableLayoutPanel19.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numMomentum)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numLayers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numHiddenNeuron)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numMaxEpochs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLearningRate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMaxEpochs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numHiddenNeuron)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numLayers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMomentum)).EndInit();
+            this.tableLayoutPanel21.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgViewWeightResult)).EndInit();
+            this.tableLayoutPanel16.ResumeLayout(false);
+            this.tableLayoutPanel16.PerformLayout();
             this.tabDataTraining.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataFiturTraining)).EndInit();
-            this.tableLayoutPanel12.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel29.ResumeLayout(false);
             this.tableLayoutPanel29.PerformLayout();
             this.tableLayoutPanel30.ResumeLayout(false);
             this.tableLayoutPanel30.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numWeightGaussian)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLengthGaussian)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numWeightGaussian)).EndInit();
+            this.tableLayoutPanel12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataFiturTraining)).EndInit();
             this.tabHome.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMikroskil)).EndInit();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMikroskil)).EndInit();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             this.tabBase.ResumeLayout(false);
             this.ResumeLayout(false);
 
